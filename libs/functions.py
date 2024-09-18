@@ -40,7 +40,7 @@ class Function(object):
         
         system = "Usage: terasploit [option]"
         simple = f"Usage: {sys.argv[0]} [option]"
-        usage = system if '/usr/bin' in sys.argv[0] else simple
+        usage = system if '/usr/share' in sys.argv[0] else simple
         print (usage)
         
         tl = os.get_terminal_size()[0]
