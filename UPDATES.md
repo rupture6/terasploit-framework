@@ -1,11 +1,11 @@
 # Framework Updates
 
 ### `1.3.0`
+
+Logging is reworked! to enable logging simply use argv option `--log` or view all option by using `terasploit --help`
+
 - Added new features
 - Console logging reworked
-```
-terasploit --log
-```
 - Bug fixes
 
 ### `1.2.1 - 1.2.5`
