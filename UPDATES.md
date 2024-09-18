@@ -2,7 +2,7 @@
 
 ### `1.3.0`
 - Added new features
-- Console logging reworked
+- Console logging reworked (--log required to enable)
 - Bug fixes
 
 ### `1.2.1 - 1.2.5`
