@@ -6,7 +6,7 @@
 - will offer a small amount of module for the mean time
 
 ### Update `v1.2.5-dev`:
-- [Update History](https://github.com/handler4/terasploit-framework/blob/master/UPDATES.md)
+- [Update History](https://github.com/rupture6/terasploit-framework/blob/master/UPDATES.md)
 
 ### Available CVE Modules:
 - CVE-2024-40110
@@ -21,7 +21,7 @@
 
 ## System Installation
 ```
-wget https://raw.githubusercontent.com/handler4/terasploit-framework/master/.install/tsfinstall
+wget https://raw.githubusercontent.com/rupture6/terasploit-framework/master/.install/tsfinstall
 bash tsfinstall && rm tsfinstall
 ```
 
@@ -29,7 +29,7 @@ bash tsfinstall && rm tsfinstall
 ```
 sudo apt update && sudo apt upgrade
 sudo apt install wget curl git python3 python3-pip
-git clone https://github.com/handler4/terasploit-framework.git
+git clone https://github.com/rupture6/terasploit-framework.git
 find terasploit-framework -type f -exec chmod +x {} \;
 cd terasploit-framework
 ./terasploit
@@ -37,12 +37,12 @@ cd terasploit-framework
 
 ## Requirements Installation
 ```
-wget https://raw.githubusercontent.com/handler4/terasploit-framework/master/.requirements/requirements.txt
+wget https://raw.githubusercontent.com/rupture6/terasploit-framework/master/.requirements/requirements.txt
 pip3 install -r requirements.txt && rm requirements.txt
 ```
 
 ## License
-- Terasploit Framework is released under [BSD 3-Clause License](https://github.com/handler4/terasploit-framework/blob/master/LICENSE).
+- Terasploit Framework is released under [BSD 3-Clause License](https://github.com/rupture6/terasploit-framework/blob/master/LICENSE).
 
 ## Contribution 
-- [Pull](https://github.com/handler4/terasploit-framework/pulls) a request on this repository.
+- [Pull](https://github.com/rupture6/terasploit-framework/pulls) a request on this repository.
