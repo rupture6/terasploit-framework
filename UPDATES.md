@@ -1,6 +1,9 @@
 # Framework Updates
 
-
+### `1.3.0`
+- Added new features
+- Console logging reworked
+- Bug fixes
 
 ### `1.2.1 - 1.2.5`
 - Added new features
