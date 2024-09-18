@@ -42,9 +42,6 @@ class Logs:
 class Logger:
     """ Logger Class """
     
-    enabled = False
-    
-    
     def __init__(self,type,message):
         if Enable.boolean == True:
             if type.lower() == 'info':
