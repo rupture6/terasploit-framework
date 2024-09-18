@@ -3,7 +3,7 @@
 clear
 sleep 1
 
-echo "Terasploit Framework - Bash :: Update"
+echo "Terasploit Framework :: Update :: Copyright (c) 2024, Rupture6"
 echo "Rupture6 - Contact :: <rupture6.dev[at]gmail.com>"
 
 echo ""
