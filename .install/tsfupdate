@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+clear
+sleep 1
+
+echo "Terasploit Framework - Bash :: Update"
+echo "Handler4 - Contact :: handler4.nsi@gmail.com"
+
+echo ""
+printf "[*] \033[32mupdating requirements\033[39m\n\n"
+curl -O https://raw.githubusercontent.com/handler4/terasploit-framework/master/.requirements/requirements.txt && pip3 install -r requirements.txt && rm -rf requirements.txt
+
+echo ""
+printf "[*] \033[32mupdating terasploit-framework files\033[39m\n\n"
+sudo rm -rf /usr/share/terasploit-framework
+git clone https://github.com/handler4/terasploit-framework.git && sudo find terasploit-framework -type f -exec chmod +x {} \;
+sudo cp -r terasploit-framework /usr/share
+sudo rm -rf terasploit-framework
+
+echo ""
+printf "[*] \033[32mupdate done!\033[39m\n\n"
+echo "type 'terasploit' to run Terasploit Framework console."

@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+: <<'Info'
+
+Terasploit Framework 
+
+Developed by Handler4, is an exploitation framework
+designed for linux systems only.
+
+I'm handler4 and I am a huge fan of metasploit framework,
+that's also why I made this exploitation framework very
+similar to msfconsole. I am quite inexperienced in cyber
+security as I am a college bs psychology student, but I
+have always dreamed of being a good hacker haha. Despite
+being quite inexperienced in cybersecurity, I will do my
+best to provide the best out of this framework.
+
+I am currently struggling on testing out my exploit modules
+as I am a busy person and I am only doing this as my favorite
+hobby. But, some of the exploit modules have been tested out
+via xampp in windows. Do send me some feedbacks if the modules
+requires some update/upgrade and do elaborate clearly the 
+details and give proper instructions if must.
+
+   Exploit Source  :  https://exploit-db.com
+   Email           :  handler4.nsi@gmail.com
+   Github Link     :  https://github.com/handler/terasploit-framework
+
+Info
+
+if [ $# -eq 0 ]
+  then
+  python3 /usr/share/terasploit-framework/terasploit
+  exit
+else
+  python3 /usr/share/terasploit-framework/terasploit $1 $2 $3 $4 $5 $6 $7 $8 $9
+  exit
+fi
