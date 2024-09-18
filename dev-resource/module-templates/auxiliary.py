@@ -15,7 +15,7 @@ class TerasploitAuxiliary(Auxiliary):
             {
                 'Module' : '',
                 'Name' : '',
-                'Author' : 'Handler4'
+                'Author' : 'Charlie (4steroth)'
             }
         )
         
