@@ -46,6 +46,7 @@ class Argv(Function):
                 framework(key,val,self.dictionary)
                 return
             else:
+                self.minimal_banner()
                 print (f"Error: an invalid option was specified '{key}'")
                 self.opt()
                 return
