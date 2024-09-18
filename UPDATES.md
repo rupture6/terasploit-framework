@@ -2,7 +2,11 @@
 
 ### `1.3.0`
 - Added new features
-- Console logging reworked (--log required to enable)
+- Console logging reworked
+  ```
+  # To enable console logging
+  terasploit --log 
+  ```
 - Bug fixes
 
 ### `1.2.1 - 1.2.5`
