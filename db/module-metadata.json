@@ -1,0 +1,93 @@
+{
+    "module-directories": [
+        "auxiliary",
+        "encoder",
+        "exploit",
+        "payload"
+    ],
+    "modules":{
+        "auxiliary":{
+            "auxiliary/http/webdav/webdav_html_upload":{
+                "name":"WebDav HTML File Upload",
+                "description":"webdav unauthenticated put request (html)."
+            },
+            "auxiliary/http/xss/query_inject":{
+                "name":"XSS Query Inject",
+                "description":"inject xss payloads in query via http requests"
+            },
+            "auxiliary/scanner/port_scanner":{
+                "name":"Socket Open Port Scanner",
+                "description":"scans for open port"
+            },
+            "auxiliary/scanner/sub_domain_scanner":{
+                "name":"Sub-Domain Scanner via HTTP Requests",
+                "description":"Retrieves sub-domains from the target"
+            },
+            "auxiliary/http/requests_handler":{
+                "name":"HTTP Requests Handler",
+                "description":"handles http requests by reading yaml config file"
+            }
+        },
+
+        "encoder":{
+            "encoder/php/base64":{
+                "name":"php base64 encoder",
+                "description":"generates php shell encoded in base64"
+            },
+            "encoder/python/base64":{
+                "name":"python base64 encoder",
+                "description":"generates python shell encoded in base64"
+            }
+        },
+
+        "exploit":{
+            "exploit/multi/handler":{
+                "name":"multi handler",
+                "description":"exploit payload handler"
+            },
+            "exploit/windows/http/xampp_webdav_upload_php":{
+                "name":"xampp webdav upload php",
+                "description":"upload shell via supplied credentials."
+            },
+            "exploit/http/webapp/apprain_cmf_authenticated_rce":{
+                "name":"apprain cmf authenticated rce",
+                "description":"upload shell via authenticated rce."
+            },
+            "exploit/http/webapp/life_insurance_management_system_rce":{
+                "name":"life insurance management system unauthenticated rce",
+                "description":"upload shell via unauthenticated rce (CVE-2024-36598)."
+            },
+            "exploit/http/webapp/monstra_cms_rce":{
+                "name":"monsta cms authenticated remote code execution",
+                "description":"upload shell via authenticated rce (CVE-2021-36548)."
+            },
+            "exploit/http/webapp/poultry_farm_management_system_rce":{
+                "name":"poultry farm management system unauthenticated rce",
+                "description":"upload shell via unauthenticated rce (CVE-2024-40110)."
+            },
+            "exploit/http/webapp/wbce_cms_authenticated_rce":{
+                "name":"wbce cms authenticated rce",
+                "description":"upload shell via authenticated rce."
+            }
+        },
+        
+        "payload":{
+            "payload/php/http/backdoor_cmd":{
+                "name":"backdoor cmd",
+                "description":"backdoor shell for HTTP websites."
+            },
+            "payload/php/multi/reverse_tcp":{
+                "name":"reverse tcp shell",
+                "description":"php reverse tcp shell for multiple platforms"
+            },
+            "payload/python/linux/reverse_tcp":{
+                "name":"reverse tcp shell",
+                "description":"python reverse tcp shell for linux platform"
+            },
+            "payload/python/reverse_udp":{
+                "name":"reverse udp shell",
+                "description":"python reverse udp shell for python platform"
+            }
+        }
+    }
+}
