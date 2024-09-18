@@ -14,6 +14,7 @@ try:
 except KeyboardInterrupt:
     print (f'[*] Terasploit console startup aborted...')
     raise SystemExit
+
 except Exception as error:
     print (f'[*] Failed to start Terasploit Framework... {error}')
     raise SystemExit
@@ -38,9 +39,16 @@ class terasploit:
             clean_last_line()
             console.start()
             
+        except KeyboardInterrupt:
+            clean_last_line()
+            print (f'[*] Terasploit console startup aborted...')
+            raise SystemExit
+        
         except SystemExit:
             raise SystemExit
+        
         except:
+            clean_last_line()
             lines = traceback.format_exc().splitlines()
             trace = traceback.format_tb(sys.exception().__traceback__)
             print (f'[*] Terasploit startup failed!')
@@ -52,4 +60,4 @@ class terasploit:
 
 
 if __name__ == '__main__':
-    args.Argv() if sys.argv[1:] else terasploit.start()
+    args.Argv() if len(sys.argv) > 1 else terasploit.start()
