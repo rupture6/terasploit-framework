@@ -15,7 +15,7 @@ class TerasploitAuxiliary(Auxiliary):
             {
                 'Module' : 'auxiliary',
                 'Name' : 'XSS Query Inject via HTTP Requests',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 
                 'Description' : [
                     'XSS vulnerability scanner. It scans for xss vulnerability',

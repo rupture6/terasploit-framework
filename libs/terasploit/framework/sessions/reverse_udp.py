@@ -11,8 +11,7 @@ import time
 import logging
 
 from init.tsf.ui.wildcard import info_print, s
-
-logger = logging.getLogger()
+from init.tsf.core.wildcard import Logger
 
 class CommandPrompt:
     def __init__(self, lhost: str = '', lport: int = 80) -> None:
@@ -53,8 +52,8 @@ class CommandPrompt:
                     continue
                 if user.lower() == 'exit':
                     self.client.close()
-                    logger.info('UDP bind connection closed.')
-                    logger.info('ReverseUDP session complete.')
+                    Logger('info','UDP bind connection closed.')
+                    Logger('info','ReverseUDP session complete.')
                     break
                 
                 command = user + '\n'

@@ -17,7 +17,7 @@ class TerasploitAuxiliary(Auxiliary):
             {
                 'Module' : 'auxiliary',
                 'Name' : 'Open Port Scanner',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 
                 'Description' : [
                     'This module is an advance threaded port scanner that allows',

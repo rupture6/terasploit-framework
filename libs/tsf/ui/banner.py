@@ -9,6 +9,7 @@ from libs.tsf.ui.termcolor import f
 from libs.tsf.ui.termline import line_break
 import random
 
+
 class banner:
     def __init__(self,module_list):
         """ Starting point of the console_banner class """

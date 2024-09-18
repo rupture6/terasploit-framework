@@ -15,7 +15,8 @@ class TerasploitPayload(Payload):
             {
                 'Module' : 'payload',
                 'Name' : 'reverse tcp shell php',
-                'Author' : 'Ivan Šincek',
+                'Module Author' : 'Charlie (4steroth)',
+                'Reverse Shell Author' : 'Ivan Šincek',
                 'Copyright' : 'Copyright (c) 2020 Ivan Šincek',
                 'Source' : 'https://github.com/pentestmonkey/php-reverse-shell',
                 'Requirements' : 'PHP v5.0.0 or greater.',

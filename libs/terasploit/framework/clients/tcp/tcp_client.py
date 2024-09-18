@@ -4,11 +4,9 @@
 
 from init.tsf.ui.wildcard import info_print
 from libs.terasploit.framework.clients.utils.sock import GetSockFromIP
+from init.tsf.core.wildcard import Logger
 
 import socket
-import logging
-
-logger = logging.getLogger()
 
 class TCPClient:
     def GetPortServ(Port):
@@ -24,14 +22,14 @@ class TCPClient:
             sock.bind((Host,int(Port)))
             
             info_print (f'Listening on {Host}:{Port}')
-            logger.info(f'Listening on {Host}:{Port}')
+            Logger('info',f'Listening on {Host}:{Port}')
             
             sock.listen(2) # For now, it is fixed at listen: 2
             connection, address = sock.accept()
             ip, port = address
 
             info_print(f"Connection received from {ip}:{port}")
-            logger.info(f"Connection received from {ip}:{port}")
+            Logger('info',f"Connection received from {ip}:{port}")
             return connection
         
         except KeyboardInterrupt:

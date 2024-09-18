@@ -17,7 +17,7 @@ class TerasploitAuxiliary(Auxiliary):
             {
                 'Module' : 'auxiliary',
                 'Name' : 'Sub-Domain Scanner via HTTP Requests',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 
                 'Description' : [
                     'Scans for sub-domain of the target via HTTP Requests.',

@@ -3,6 +3,7 @@
 #######
 
 class command_line:    
+    
     def parse(args) -> tuple:
         parse_command = args.strip().partition(' ')
         parts = parse_command[2].strip().partition(' ')

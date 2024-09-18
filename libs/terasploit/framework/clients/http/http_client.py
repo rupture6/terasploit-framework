@@ -3,12 +3,10 @@
 #######
 
 import requests
-import logging
 
 from init.tsf.ui.wildcard import info_print
+from init.tsf.core.wildcard import Logger
 from init.terasploit.framework.formatter.wildcard import DataType
-
-logger = logging.getLogger()
 
 content = {
     'url':None,
@@ -48,7 +46,7 @@ class HTTP:
         self.session.close()
         setattr(HTTP,'session',None)
         setattr(HTTP,'session',requests.Session())
-        logger.info(f"HTTPClient :: HTTP session closed and started a new one.")
+        Logger('info',f"HTTPClient :: HTTP session closed and started a new one.")
 
 
 class HTTPClient:
@@ -114,5 +112,5 @@ class HTTPClient:
             json=content['json']
         )
         
-        logger.info(f"HTTPCLient [HTTPRequests] :: '{content['url']}' - {result.status_code}")
+        Logger('info',f"HTTPCLient [HTTPRequests] :: '{content['url']}' - {result.status_code}")
         return result

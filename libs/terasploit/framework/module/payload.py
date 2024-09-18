@@ -8,7 +8,7 @@ from libs.terasploit.framework.opts.opt_distributor import Opt
 from libs.terasploit.framework.arch_extensions import ArchExtension
 
 from init.terasploit.framework.clients.wildcard import *
-from init.tsf.ui.wildcard import *
+from init.tsf.ui.wildcard import info_print
 
 __all__ = [
     'Opt',

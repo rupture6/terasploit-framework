@@ -9,8 +9,8 @@ This is used on banners.
 
 def information() -> dict:
     return {
-        'framework-version'  :  'v1.2.5-dev',
+        'framework-version'  :  'v1.3.0-dev',
         'framework-license'  :  'BSD-3-Clause License',
-        'framework-github'   :  'https://github.com/handler/terasploit-framework',
+        'framework-github'   :  'https://github.com/rupture6/terasploit-framework',
         'dev-email'          :  'handler4.nsi@gmail.com'
     }

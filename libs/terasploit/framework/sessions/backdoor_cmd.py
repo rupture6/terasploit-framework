@@ -1,11 +1,9 @@
 from libs.terasploit.framework.clients.http.http_client import HTTPClient
 from init.tsf.ui.wildcard import info_print, s
+from init.tsf.core.wildcard import Logger
 
 import os
 import time
-import logging
-
-logger = logging.getLogger()
 
 class CommandPrompt:
     def __init__(self, shell: str = '', host: str = '') -> None:
@@ -37,7 +35,7 @@ class CommandPrompt:
                     os.system('clear')
                     continue
                 if user.lower() == 'exit':
-                    logger.info('Backdoor session complete.')
+                    Logger('info','Backdoor session complete.')
                     break
                 
                 time.sleep(1) # to avoid flooding the target with requests

@@ -16,7 +16,7 @@ class TerasploitEncoder(Encoder):
             {
                 'Module' : self.module_type,
                 'Name' : 'Python Base64 Encoder',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 
                 'Description' : [
                     'PHP Base64 Encoder'

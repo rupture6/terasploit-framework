@@ -5,11 +5,11 @@
 import sys; sys.dont_write_bytecode = True
 import os
 
-from libs.tsf.util.console import contents
 from config.module_config import modules
 from libs.tsf.ui.printer import info_print
 from libs.tsf.ui.termline import *
 from libs.tsf.ui.termcolor import *
+
 
 class Util:
     """ Table Utilities Class"""
@@ -58,7 +58,7 @@ class Table:
             if content[tl:]:
                 con = content[tl:]
                 while True:
-                    print (f"{' '*count}{con[:tl]}")
+                    print (f"{' '*count}{con[:tl].lstrip(' ')}")
                     if con[tl:]:
                         con = con[tl:]
                     else:

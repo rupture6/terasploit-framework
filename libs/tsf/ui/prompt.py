@@ -6,6 +6,7 @@ from config.module_config import directories
 from itertools import dropwhile
 from libs.tsf.ui.termcolor import *
 
+
 class prompt:
     """ Generates prompt template for console command prompt """
 

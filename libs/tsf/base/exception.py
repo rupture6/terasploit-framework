@@ -4,10 +4,10 @@
 
 import sys; sys.dont_write_bytecode = True
 import os
-import logging
+
+from init.tsf.core.wildcard import Logger
 from init.tsf.ui.wildcard import *
 
-logger = logging.getLogger()
 
 
 class exception_error:
@@ -126,10 +126,10 @@ class TerasploitException(Exception):
     """ Terasploit Base Exception Handler """
     
     def __init__(self,cause: str, exception_type: str, message: str = "") -> None:
-        logger.error("Terasploit Exception!")
+        Logger('error',"Terasploit Exception!")
         if message:
-            logger.error(f"Exception Message: {message}")
-        logger.error(f"Exception Cause: {cause}")
+            Logger('error',f"Exception Message: {message}")
+        Logger('error',f"Exception Cause: {cause}")
         TerasploitExceptionMessage(exception_type,cause)
         super(TerasploitException,self).__init__(message)
         

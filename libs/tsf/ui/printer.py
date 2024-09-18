@@ -4,9 +4,11 @@
 
 import sys
 import time
+import os
 
 from libs.tsf.ui.termcolor import tb
 from libs.tsf.ui.termline import line_feed
+
 
 def info_print(content,type='BLUE',uplinebreak=False,downlinebreak=False,end=line_feed()) -> None:
     """ Prints text with text templates [*] [+] [-] [!] """
@@ -32,3 +34,16 @@ def type_print(content,speed: int = 100):
         sys.stdout.write(chars)
         sys.stdout.flush()
         time.sleep(10./speed)
+        
+        
+def print_overlap(content,count):
+    """ Prints text that overlaps from the terminal length on description level """
+    
+    tl = os.get_terminal_size()[0]
+    con = content[tl:]
+    while True:
+        print (f"{' '*count}{con[:tl].lstrip(' ')}")
+        if con[tl:]:
+            con = con[tl:]
+        else:
+            break

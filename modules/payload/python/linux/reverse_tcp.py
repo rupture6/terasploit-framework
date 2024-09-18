@@ -15,7 +15,7 @@ class TerasploitPayload(Payload):
             {
                 'Module' : 'payload',
                 'Name' : 'reverse tcp shell python',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 'Type' : 'reverse_tcp',
                 'Arch' : 'python',
             

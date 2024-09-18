@@ -2,16 +2,21 @@
 # Interpreter: Core
 #######
 
-from init.tsf.core.wildcard import *
-from init.tsf.base.wildcard import *
+from init.tsf.core.wildcard import Get, Global, Logger
+
+from init.tsf.base.wildcard import (
+    TerasploitStartSessionError, 
+    TerasploitModuleException, 
+    TerasploitUnknownCommand, 
+    execute
+)
+
 from init.tsf.ui.wildcard import info_print
 from init.terasploit.framework.command.wildcard import *
 
 from libs.terasploit.framework.exploit.handler import exploit_session
 from libs.terasploit.framework.command.util.decorator import check_missing_opt
 
-import logging
-logger = logging.getLogger()
 
 class module_return_handler:
     """ Handles the module return """
@@ -23,21 +28,21 @@ class module_return_handler:
         if module_return == 'session':
             if module_type != 'exploit':
                 raise TerasploitStartSessionError(module,'a non-exploit module has attempted to start a session')
-            logger.info('Exploit module has started a session')
+            Logger('info','Exploit module has started a session')
             exploit_session(start_session=boolean)
             
         if module_return == 'done':
             if boolean == True:
                 info_print (f'{module} module done running!')
-                logger.info('Module done running!')
+                Logger('info','Module done running!')
             if boolean == False:
-                logger.info('Module done running, message was suppressed.')
+                Logger('info','Module done running, message was suppressed.')
         
         if module_return == 'exception':
             if boolean == True:
                 raise TerasploitModuleException(module,'Module ended with an exception error')
             if boolean == False:
-                logger.info('Module ended with an exception error, exception was suppressed.')
+                Logger('info','Module ended with an exception error, exception was suppressed.')
                 info_print (f'{module} module done running!')
 
 
@@ -120,17 +125,20 @@ class commands(object):
 class function_handler(commands):
     """ Command function handler """
     
-    def __init__(self,*args) -> None:
-        self.args = args
+    def __init__(self,command,parameter,value,options) -> None:
+        self.command = command
+        self.parameter = parameter
+        self.value = value
+        self.options = options
+        
         
     def execute_command(self) -> None:
-        logger = logging.getLogger()
-        command, parameter, value, opt = self.args
+        command, parameter, value, opt = self.command, self.parameter, self.value, self.options
         
         module_command = ['run','exploit']
         if command in module_command:
             if command == 'run' or command == 'exploit':
-                logger.info('Module executed !!')
+                Logger('info','Module executed!')
                 
             module_commands.execute(command)
             return
@@ -144,11 +152,11 @@ class function_handler(commands):
             setattr(Global,'Value',value)
             setattr(Global,'Options',opt)
             
-            logger.info(f"'{getattr(Global,'User')}' :prompt: command: '{command}', parameter: '{parameter}' value: '{value}' opt: '{opt}'")
+            Logger('info',f"'{getattr(Global,'User')}' :prompt: command: ({command}), parameter: ({parameter}) value: ({value}) opt: ({opt})")
             command_function()
             return
         
         else:
-            logger.info(f"'{getattr(Global,'User')}' :prompt: exec command:({command}), parameter:({parameter}), value:({value})")
+            Logger('info',f"'{getattr(Global,'User')}' :prompt: exec command:({command}), parameter:({parameter}), value:({value})")
             execute(command,parameter,value)
             return

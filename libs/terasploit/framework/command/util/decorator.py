@@ -4,14 +4,22 @@
 
 from __future__ import annotations
 
-from init.tsf.core.wildcard import *
-from init.tsf.base.wildcard import *
-from init.tsf.ui.wildcard import *
-from init.tsf.util.wildcard import *
+from init.tsf.base.wildcard import (
+    TerasploitModuleRequired,
+    TerasploitUnknownCommand,
+    TerasploitEncoderRequired,
+    TerasploitPayloadRequired,
+    TerasploitParamError,
+    TerasploitValueError
+)
+
+from init.tsf.core.wildcard import Get, Set
+from init.tsf.ui.wildcard import line_break, info_print
+from init.tsf.util.wildcard import usage_banner
 
 from libs.terasploit.framework.opts.opt_distributor import Opt
 
-# -- Decorators --
+
 
 def check_missing_opt(function) -> any:
     """ checks if there is any required options that has no value """

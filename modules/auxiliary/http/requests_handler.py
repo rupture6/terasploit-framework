@@ -16,9 +16,9 @@ class TerasploitAuxiliary(Auxiliary):
             {
                 'Module' : 'auxiliary',
                 'Name' : 'HTTP Requests Handler via Yaml Config',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 'Version' : '1.0',
-                'Documentation' : 'https://github.com/handler4/terasploit-framework/blob/master/documentation/modules/requests_handler.md',
+                'Documentation' : 'https://github.com/rupture6/terasploit-framework/blob/master/documentation/modules/requests_handler.md',
                 
                 'Description' : [
                     'Versatile module that allows a user to use requests library',

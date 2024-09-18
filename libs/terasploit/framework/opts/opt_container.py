@@ -4,8 +4,6 @@
 
 from __future__ import annotations
 
-import logging
-logger = logging.getLogger()
 
 class OptionsContainer(object):
     """ Contains the current module options dictionary """
@@ -13,13 +11,11 @@ class OptionsContainer(object):
     def __init__(self,opt=None) -> None:
         """ init function to get the opt """
         
-        logger.info("default module options is registered.")
         self.opt = opt
         
     def __get__(self, instance, owner) -> any|None:
         """ get descriptor to return the current module options """
-        
-        logger.info("registered options was accessed.")
+
         return self.opt
 
 
@@ -29,7 +25,6 @@ class InsertOption(OptionsContainer):
     def __set__(self, instance, value) -> None:
         """ set descriptor to store the currnt module options """
         
-        logger.info("registered a new module options.")
         self.opt = value
 
 

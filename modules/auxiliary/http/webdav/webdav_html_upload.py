@@ -15,7 +15,7 @@ class TerasploitExploit(Auxiliary):
             {
                 'Module' : 'auxiliary',
                 'Name' : 'WebDav Unauthenticated HTML file upload',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 
                 'Description' : [
                     'Takes advantage of unauthenticated put requests WebDav',

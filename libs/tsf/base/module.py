@@ -5,9 +5,9 @@
 from __future__ import annotations
 
 import importlib
-
 from init.tsf.ui.wildcard import *
 from libs.tsf.base.exception import TerasploitModuleError, TerasploitException
+
 
 class Modulizer:
     def Import(path: str):

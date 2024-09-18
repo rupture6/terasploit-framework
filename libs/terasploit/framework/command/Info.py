@@ -12,7 +12,6 @@ from init.tsf.base.wildcard import Modulizer, Paths
 
 class _info_:
 
-
     def function() -> None:
         module, _ = Get.module()
         payload, _ = Get.payload()

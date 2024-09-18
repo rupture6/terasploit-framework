@@ -15,7 +15,7 @@ class TerasploitPayload(Payload):
             {
                 'Module' : 'payload',
                 'Name' : 'backdoor cmd for http websites',
-                'Author' : 'Handler4',
+                'Author' : 'Charlie (4steroth)',
                 'Type' : 'backdoor_cmd',
                 'Arch' : 'php',
             

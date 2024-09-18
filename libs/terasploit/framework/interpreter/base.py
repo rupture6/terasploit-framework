@@ -4,22 +4,20 @@
 
 import sys
 import time
-import logging
 import traceback
 
-from init.tsf.ui.wildcard import *
-from init.tsf.core.wildcard import *
-from init.tsf.base.wildcard import *
-from init.terasploit.framework.formatter.wildcard import *
+from init.tsf.ui.wildcard import prompt
+from init.tsf.core.wildcard import History, Global, Logger
+from init.tsf.base.wildcard import TerasploitException, exception_error
+from init.terasploit.framework.formatter.wildcard import command_line
 from libs.terasploit.framework.interpreter.core import function_handler
 
 
 class interpreter:
     def __init__(self) -> None:
         History.access()
-        self.logger = logging.getLogger()
         current_time = time.strftime('%Z %H:%M:%S - %A, %B %e, %Y')
-        self.logger.info(f'Console started! - {current_time}.')
+        Logger('info',f'Console started! - {current_time}.')
         self.command_prompt()
         
         
@@ -55,5 +53,5 @@ class interpreter:
                 lines = traceback.format_exc().splitlines()
                 trace = traceback.format_tb(sys.exception().__traceback__)
                 exception_error(lines[0], trace, lines[-1]).exception_message()
-                self.logger.error(error)
+                Logger('error',error)
                 continue

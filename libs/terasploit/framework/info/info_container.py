@@ -5,19 +5,14 @@
 from __future__ import annotations
 from init.tsf.core.wildcard import Get
 
-import logging
-logger = logging.getLogger()
-
 
 class InfoContainer(object):
     """ Contains the information of the module """
     
     def __init__(self,dictionary) -> None:
-        logger.info('Module info registered!')
         self.dictionary = dictionary
         
     def __get__(self,instance,owner) -> dict:
-        logger.info('Module info was accessed.')
         return self.dictionary
     
     
@@ -25,7 +20,6 @@ class InfoInsert(InfoContainer):
     """ Inserts the info in InfoContainer Class to be accessed later """
     
     def __set__(self,instance,value) -> None:
-        logger.info('Module info updated!')
         self.dictionary = value
         
 
