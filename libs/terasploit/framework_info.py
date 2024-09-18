@@ -12,5 +12,5 @@ def information() -> dict:
         'framework-version'  :  'v1.3.0-dev',
         'framework-license'  :  'BSD-3-Clause License',
         'framework-github'   :  'https://github.com/rupture6/terasploit-framework',
-        'dev-email'          :  'handler4.nsi@gmail.com'
+        'dev-email'          :  '<rupture6.dev[at]gmail.com>'
     }
