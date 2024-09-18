@@ -4,7 +4,7 @@ clear
 sleep 1
 
 echo "Terasploit Framework - Bash :: Update"
-echo "Handler4 - Contact :: handler4.nsi@gmail.com"
+echo "Rupture6 - Contact :: <rupture6.dev[at]gmail.com>"
 
 echo ""
 printf "[*] \033[32mupdating requirements\033[39m\n\n"
