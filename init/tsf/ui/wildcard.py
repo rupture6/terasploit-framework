@@ -20,7 +20,8 @@ from libs.tsf.ui.termcolor import (
 
 from libs.tsf.ui.printer import (
     type_print,
-    info_print
+    info_print,
+    print_overlap
 )
 
 __all__ = [
@@ -41,5 +42,6 @@ __all__ = [
     "tb",
     
     "type_print",
-    "info_print"
+    "info_print",
+    "print_overlap"
 ]

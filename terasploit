@@ -1,48 +1,55 @@
 #!/usr/bin/env python3
 
 try:
-    """ :Starting Point:
+    import sys; sys.dont_write_bytecode = True
+    import traceback
     
-    Imports required tsf libraries then imports
-    all required libraries for modules
-    """
+    from init.tsf.ui.wildcard import clean_last_line, banner, line_feed
+    from init.tsf.base.wildcard import Search
     
-    import sys; sys.dont_write_bytecode=True
-    from libs.terasploit.framework.console import *
-    from init.tsf.ui.wildcard import *
-
-    with Loading(message='[*] Starting Terasploit Framework Console...'):
-        
-        from libs.terasploit.framework.module.auxiliary import *
-        from libs.terasploit.framework.module.encoder import *
-        from libs.terasploit.framework.module.exploit import *
-        
-        # Payloads only contains shell codes and opts,
-        # they don't have python libraries to use.
-        # That's why it is not included. The sole
-        # purpose of this wildcard import is to eliminate
-        # delays when using modules once the console 
-        # started.
-
-    clean_last_line()
-                
+    from libs.terasploit.framework.interpreter import base
+    from libs.terasploit.framework.console import Loading
+    from libs import args
+    
 except KeyboardInterrupt:
-    print (' '*80+'\r', end='')
-    print ('[*] Startup aborted...')
-    raise SystemExit(130)
-    # Returns exit code 130 - Indicates that the command or script was terminated 
-    # by the user using Control-C (SIGINT signal).
-    
+    print (f'[*] Terasploit console startup aborted...')
+    raise SystemExit
 except Exception as error:
-    print (' '*80+'\r', end='')
-    print (f'[*] Startup failed...')
-    print (f'[*] Error: {error}')
-    raise SystemExit(1)
-    # Returns exit code 1 - A catch-all exit code for a variety of general errors. 
-    # Often used when the command or program encounters an error, but no specific 
-    # exit code is available for the situation.
+    print (f'[*] Failed to start Terasploit Framework... {error}')
+    raise SystemExit
+        
+        
+class console:
+    """ Console starter """
+    
+    def start() -> None:
+        modules = Search.all_modules()
+        banner(modules)
+        base.interpreter()
+
+
+class terasploit:
+    """ Terasploit Framework Class """
+    
+    def start() -> None:
+        try:
+            with Loading(message='[*] Starting Terasploit Framework Console...'):
+                from init import modules as _
+            clean_last_line()
+            console.start()
+            
+        except SystemExit:
+            raise SystemExit
+        except:
+            lines = traceback.format_exc().splitlines()
+            trace = traceback.format_tb(sys.exception().__traceback__)
+            print (f'[*] Terasploit startup failed!')
+            print (f'[*] {lines[0]}{line_feed()}')
+            for i in trace:
+                print (f"  --> {i}")
+            print (f'[*] Error: {lines[-1]}')
+            raise SystemExit
 
 
 if __name__ == '__main__':
-    clean_last_line()
-    start()
+    args.Argv() if sys.argv[1:] else terasploit.start()
