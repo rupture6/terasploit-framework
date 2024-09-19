@@ -1,7 +1,7 @@
 # Framework Updates
 
 ### `1.3.1`
-- Added new modules (7)
+- Added new modules (8)
 - Bug fixes
 
 ### `1.3.0`
