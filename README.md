@@ -1,17 +1,18 @@
 # Terasploit
-![Framework Version](https://img.shields.io/badge/Framework_1.3.0--dev-blue) ![OS Compatibility](https://img.shields.io/badge/OS-Linux-red) ![Python Version](https://img.shields.io/badge/Python-3.11.9-green)
+![Framework Version](https://img.shields.io/badge/Framework_1.3.1--dev-blue) ![OS Compatibility](https://img.shields.io/badge/OS-Linux-red) ![Python Version](https://img.shields.io/badge/Python-3.11.9-green)
 
 ### Early Version Note:
 - new module development may be slow due to lack of manpower
 - will offer a small amount of module for the mean time
 
-### Update `v1.3.0-dev`:
+### Update `v1.3.1-dev`:
 - [Update History](https://github.com/rupture6/terasploit-framework/blob/master/UPDATES.md)
 
 ### Available CVE Modules:
 - CVE-2024-40110
 - CVE-2021-36548
 - CVE-2024-36598
+- CVE-2024-42845
 
 ### Tested on:
 - [Kali Linux](https://www.kali.org/)
