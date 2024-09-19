@@ -7,6 +7,7 @@ from __future__ import annotations
 import bcrypt
 import argon2
 from base64 import b64encode
+from binascii import hexlify
 from hashlib import (
     sha1,
     sha224,
@@ -36,7 +37,8 @@ __all__ = [
     'sha384',
     'sha512',
     'md5',
-    'b64encode'
+    'b64encode',
+    'hexlify'
 ]
 
 class Encoder(object):

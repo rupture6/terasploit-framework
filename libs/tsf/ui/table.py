@@ -6,7 +6,7 @@ import sys; sys.dont_write_bytecode = True
 import os
 
 from config.module_config import modules
-from libs.tsf.ui.printer import info_print
+from libs.tsf.ui.printer import info_print, print_overlap
 from libs.tsf.ui.termline import *
 from libs.tsf.ui.termcolor import *
 
@@ -56,13 +56,7 @@ class Table:
             count = len(content) - len(z)
             print (content[:tl])
             if content[tl:]:
-                con = content[tl:]
-                while True:
-                    print (f"{' '*count}{con[:tl].lstrip(' ')}")
-                    if con[tl:]:
-                        con = con[tl:]
-                    else:
-                        break
+                print_overlap(content,count)
         line_break()
 
 
@@ -84,13 +78,7 @@ class Table:
             count = len(content) - len(z)
             print (content[:tl])
             if content[tl:]:
-                con = content[tl:]
-                while True:
-                    print (f"{' '*count}{con[:tl]}")
-                    if con[tl:]:
-                        con = con[tl:]
-                    else:
-                        break
+                print_overlap(content,count)
         line_break()
 
 
@@ -107,6 +95,7 @@ class Table:
         
         sl = Util.get_longest_obj(result) + 1
         nl = Util.get_longest_obj(str(len(result)))
+        tl = os.get_terminal_size()[0]
         
         for i in ['Encoder','Payload','Exploit','Auxiliary']:
             count = module_count[i]
@@ -125,7 +114,11 @@ class Table:
                         continue
                     if i.lower() in x:
                         module_number += 1
-                        print (f"   {str(module_number).ljust(nl):<3} {x.ljust(sl):<17} {description}")
+                        content = (f"   {str(module_number).ljust(nl):<3} {x.ljust(sl):<17} {description}")
+                        count = len(content) - len(description)
+                        print (content[:tl])
+                        if content[tl:]:
+                            print_overlap(content,count)
                 line_break()
         
         if unknown_module:

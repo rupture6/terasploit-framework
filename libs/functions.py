@@ -53,7 +53,28 @@ class Function(object):
                 print (content[:tl])
                 if content[tl:]:
                     print_overlap(content,count)
-    
+                    
+                    
+    def startbasenobanner(self) -> None:
+        """ Starts the base interpreter with no banner """
+        try:
+            with Loading(message='[*] Starting Terasploit Framework Console...'):
+                from init import modules as _
+            clean_last_line()
+            base.interpreter()
+            
+        except SystemExit:
+            raise SystemExit
+        except:
+            lines = traceback.format_exc().splitlines()
+            trace = traceback.format_tb(sys.exception().__traceback__)
+            print (f'[*] Terasploit startup failed!')
+            print (f'[*] {lines[0]}{line_feed()}')
+            for i in trace:
+                print (f"  --> {i}")
+            print (f'[*] Error: {lines[-1]}')
+            raise SystemExit        
+
     
     def startbase(self) -> None:
         """ Starts the base interpreter """

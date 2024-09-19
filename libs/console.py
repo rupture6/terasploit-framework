@@ -2,7 +2,7 @@
 # Console
 #######
 
-from libs.functions import Function, base
+from libs.functions import Function
 from init.tsf.core.wildcard import Logs
 
 
@@ -24,11 +24,13 @@ class console(Function):
         if self.key.lower() in ['-q','--quiet']:
             if '--log' in self.dictionary:
                 Logs().logs()
-            base.interpreter()
+            self.minimal_banner()
+            self.startbasenobanner()
             
         if self.key.lower() in ['--log']:
             Logs().logs()
             if '-q' in self.dictionary or '--quiet' in self.dictionary:
-                base.interpreter()
+                self.minimal_banner()
+                self.startbasenobanner()
                 return
             self.startbase()

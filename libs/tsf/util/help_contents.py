@@ -17,7 +17,6 @@ class Help:
         }
 
         Module: dict = {
-            'all' : 'Display all available modules.',
             'back' : 'Unuse the current module.',
             'exploit' : 'Executes the current module in use.',
             'info' : 'Displays full module information.',

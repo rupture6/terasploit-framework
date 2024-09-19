@@ -6,7 +6,7 @@ from libs.terasploit.framework.opts.opt_container import *
 from libs.terasploit.framework.info.info_container import *
 from libs.terasploit.framework.module.encoder import *
 
-class TerasploitEncoder(Encoder):
+class TerasploitModule(Encoder):
     
     module_type = 'encoder'
     payload = 'modules/payload/php/multi/reverse_tcp'

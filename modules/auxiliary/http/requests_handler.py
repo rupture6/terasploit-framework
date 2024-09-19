@@ -6,7 +6,7 @@ from libs.terasploit.framework.opts.opt_container import *
 from libs.terasploit.framework.info.info_container import *
 from libs.terasploit.framework.module.auxiliary import *
 
-class TerasploitAuxiliary(Auxiliary):
+class TerasploitModule(Auxiliary):
     
     module_type = 'auxiliary'
     content = {'url':None,'params':None,'data':None,'headers':None,'cookies':None,'files':None,'auth':None,'timeout':None,'proxies':None,'verify':None,'cert':None,'stream':None,'json':None}

@@ -15,6 +15,8 @@ import threading
 import time
 import traceback
 import yaml
+import base64
+import pydicom
 
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
@@ -39,8 +41,6 @@ from init.terasploit.framework.clients.wildcard import (
     UDPClient,
     SOCKClient
 )
-
-from init.tsf.ui.wildcard import info_print
 
 __all__ = [
     'Opt',
@@ -68,7 +68,9 @@ __all__ = [
     'threading',
     'traceback',
     'yaml',
-    'time'
+    'time',
+    'pydicom',
+    'base64'
 ]
 
 class Auxiliary(object):

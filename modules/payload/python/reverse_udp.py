@@ -6,7 +6,7 @@ from libs.terasploit.framework.opts.opt_container import *
 from libs.terasploit.framework.info.info_container import *
 from libs.terasploit.framework.module.payload import *
 
-class TerasploitPayload(Payload):
+class TerasploitModule(Payload):
     
     module_type = 'payload'
     
@@ -20,7 +20,7 @@ class TerasploitPayload(Payload):
                 'Arch' : 'python',
             
                 'Description' : [
-                    'python reverse tcp shell for linux platform'
+                    'python reverse tcp shell'
                 ],
             
                 'Platform' : [

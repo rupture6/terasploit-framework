@@ -5,3 +5,4 @@
 class ArchExtension:
     PHP = 'php'
     PYTHON = 'py'
+    PERL = 'pl'
