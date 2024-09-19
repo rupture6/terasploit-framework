@@ -1,5 +1,9 @@
 # Framework Updates
 
+### `1.3.1`
+- Added new modules (7)
+- Bug fixes
+
 ### `1.3.0`
 
 Logging is reworked! to enable logging simply use argv option `--log` or view all option by using `terasploit --help`
