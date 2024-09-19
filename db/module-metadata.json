@@ -35,6 +35,11 @@
             "auxiliary/webapp/python/invesalius3_rce":{
                 "name":"Invesalius 3.1 Remote Code Execution",
                 "description":"Arbitrary Code Execution VIA Crafted DICOM File (CVE-2024-42845)"
+            },
+
+            "auxiliary/gather/banner_grabber":{
+                "name":"Banner Grabber",
+                "description":"Grab Banner VIA Socket Library"
             }
         },
 
