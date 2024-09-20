@@ -32,14 +32,14 @@
                 "description":"HTTP Requests Handler (Requests Contents VIA YAML Config File)"
             },
 
-            "auxiliary/webapp/python/invesalius3_rce":{
-                "name":"Invesalius 3.1 Remote Code Execution",
-                "description":"Arbitrary Code Execution VIA Crafted DICOM File (CVE-2024-42845)"
-            },
-
             "auxiliary/gather/banner_grabber":{
                 "name":"Banner Grabber",
-                "description":"Grab Banner VIA Socket Library"
+                "description":"Grab Banne,r VIA Socket Library"
+            },
+
+            "auxiliary/webapp/python/devikav1":{
+                "name":"Devika v1 Path Traversal VIA snapshot_path Parameter",
+                "description":"Path Traversal Attack VIA 'snapshot_path' Parameter Vulnerability"
             }
         },
 

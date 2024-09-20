@@ -16,7 +16,7 @@ import time
 import traceback
 import yaml
 import base64
-import pydicom
+import re
 
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
@@ -69,8 +69,8 @@ __all__ = [
     'traceback',
     'yaml',
     'time',
-    'pydicom',
-    'base64'
+    'base64',
+    're'
 ]
 
 class Auxiliary(object):

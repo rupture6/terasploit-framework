@@ -17,13 +17,13 @@ class command_line:
         
         parameter = parts[0]    
         vals, _, _ = parts[2].strip().partition(' ')
-        value = '' if '-' in vals else vals
+        value = '' if '|' in vals else vals
         
         value_part = parts[2].split(' ')
-        opts_list = value_part[1:] if '-' not in value_part[0] else value_part
+        opts_list = value_part[1:] if '|' not in value_part[0] else value_part
 
         for i in opts_list:
-            if '-' in i:
+            if '|' in i:
                 opts_key.append(i)
             else:
                 opts_value.append(i)
