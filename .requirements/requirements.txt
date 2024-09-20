@@ -2,9 +2,6 @@ beautifulsoup4
 requests
 html5
 lxml
-pwn
-asyncio
-aiohttp
 urllib3
 pytz
 bcrypt
