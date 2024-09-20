@@ -12,7 +12,6 @@
 - CVE-2024-40110
 - CVE-2021-36548
 - CVE-2024-36598
-- CVE-2024-42845
 
 ### Tested on:
 - [Kali Linux](https://www.kali.org/)
