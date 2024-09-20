@@ -10,4 +10,3 @@ pytz
 bcrypt
 argon2-cffi
 pyyaml
-pydicom
