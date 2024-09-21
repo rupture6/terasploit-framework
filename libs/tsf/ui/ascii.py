@@ -31,7 +31,7 @@ class ascii_banners:
 ''' + s.RESET_ALL + f.RESET
 
         # Banner 2
-        B2 = s.BRIGHT + f.RED + '''
+        B2 = f'''{s.BRIGHT}{f.RED}
      ________  ________  ___    ___ ________      
     |\   ____\|\   __  \|\  \  /  /|\_____  \     
     \ \  \___|\ \  \|\  \ \  \/  / ||____|\  \    
@@ -41,7 +41,7 @@ class ascii_banners:
        |\_________\|__||\____/ /              |\__\ 
        \|_________|    \|____|/               \|__|
 
-''' + s.RESET_ALL + f.RESET
+{s.RESET_ALL}{f.RESET}'''
 
         # Banner 3
         B3 = s.BRIGHT + '''  
@@ -82,9 +82,10 @@ class ascii_banners:
       | |/ _ \ '__/ _` |`--. \ '_ \| |/ _ \| | __|
       | |  __/ | | (_| /\__/ / |_) | | (_) | | |_ 
       \_/\___|_|  \__,_\____/| .__/|_|\___/|_|\__|
-                             | |  {f.RESET}Framework{f.GREEN}     
-                             |_|                  
-{f.RESET}"""
+                             | |  {f.RESET}Framework{f.GREEN}
+                             |_|{f.RESET}
+
+"""
 
         # Banner 6
         B6 = f"""{s.BRIGHT}{f.RED}

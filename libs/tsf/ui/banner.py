@@ -41,7 +41,7 @@ class banner:
         row_2 = f'encoder: {encoder_count}'
 
         line_break()
-        print (f"         =[ {self.terasploit[:60]:<60} ]")
+        print (f"         =[ {self.terasploit[:56]:<56} ]")
         print (f'◄ -- + --=[ running in python - {contents.python_version[:26]:<26} ]')
         print (f"◄ -- + --=[ {row_1[:46]:<46} ]")
         print (f'◄ -- + --=[ {row_2[:46]:<46} ]')

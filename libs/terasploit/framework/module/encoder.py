@@ -3,45 +3,11 @@
 #######
 
 from __future__ import annotations
+from libs.terasploit.framework.module.dependencies import *
 
-import bcrypt
-import argon2
-from base64 import b64encode
-from binascii import hexlify
-from hashlib import (
-    sha1,
-    sha224,
-    sha256,
-    sha384,
-    sha512,
-    md5
-)
-
-from libs.terasploit.framework.opts.opt_distributor import Opt
-from libs.terasploit.framework.arch_extensions import ArchExtension
-
-from init.terasploit.framework.clients.wildcard import *
-from init.tsf.ui.wildcard import info_print, f
-from init.tsf.base.wildcard import Search
-
-__all__ = [
-    'Opt',
-    'Encoder',
-    'info_print',
-    'f',
-    'bcrypt',
-    'argon2',
-    'sha1',
-    'sha224',
-    'sha256',
-    'sha384',
-    'sha512',
-    'md5',
-    'b64encode',
-    'hexlify'
-]
 
 class Encoder(object):
+    """ Encoder Class """
     
     def payload_path_list(self) -> list:
         module_list = Search.all_modules()

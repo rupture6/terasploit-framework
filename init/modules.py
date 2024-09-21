@@ -9,6 +9,4 @@ sys.path.append(os.path.abspath(os.path.join(directory_path, os.pardir)))
 
 # Used for advance importing and dependencies checking.
 
-from libs.terasploit.framework.module.auxiliary import *
-from libs.terasploit.framework.module.encoder import *
-from libs.terasploit.framework.module.exploit import *
+from libs.terasploit.framework.module.dependencies import *

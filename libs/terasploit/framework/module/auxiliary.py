@@ -3,77 +3,11 @@
 #######
 
 from __future__ import annotations
+from libs.terasploit.framework.module.dependencies import *
 
-import sys
-import urllib3
-import requests
-import socket
-import random
-import string
-import warnings
-import threading
-import time
-import traceback
-import yaml
-import base64
-import re
-
-from urllib.parse import urlparse
-from bs4 import BeautifulSoup
-from bs4 import MarkupResemblesLocatorWarning
-from requests.auth import HTTPDigestAuth
-
-from data.data_handler import DataHandler
-
-from libs.terasploit.framework.opts.opt_distributor import Opt
-from libs.terasploit.framework.clients.utils.familiy_address import AddrFam
-from libs.terasploit.framework.clients.utils.socket_kind import SockType
-from libs.terasploit.framework.clients.utils.error_codes import tcp_error_codes, udp_error_codes
-from libs.terasploit.framework.formatter.fix_data_type import DataType
-
-from init.terasploit.framework.clients.wildcard import *
-from init.tsf.ui.wildcard import info_print, f, b, s, clean_last_line
-
-from init.terasploit.framework.clients.wildcard import (
-    HTTP,
-    HTTPClient,
-    TCPClient,
-    UDPClient,
-    SOCKClient
-)
-
-__all__ = [
-    'Opt',
-    'Auxiliary',
-    'info_print',
-    'HTTP',
-    'HTTPClient',
-    'TCPClient',
-    'UDPClient',
-    'SOCKClient',
-    'AddrFam',
-    'SockType',
-    'DataType',
-    'tcp_error_codes',
-    'udp_error_codes',
-    'f',
-    's',
-    'b',
-    'clean_last_line',
-    
-    'HTTPDigestAuth',
-    'BeautifulSoup',
-    'requests',
-    'socket',
-    'threading',
-    'traceback',
-    'yaml',
-    'time',
-    'base64',
-    're'
-]
 
 class Auxiliary(object):
+    """ Auxiliary Class """
 
     def GetOPT(self, opt: str):
         """ Returns the value of an option """

@@ -138,7 +138,7 @@ class function_handler(commands):
         module_command = ['run','exploit']
         if command in module_command:
             if command == 'run' or command == 'exploit':
-                Logger('info','Module executed!')
+                Logger('info','Module execution attempt...')
                 
             module_commands.execute(command)
             return
