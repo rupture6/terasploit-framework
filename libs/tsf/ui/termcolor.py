@@ -2,49 +2,47 @@
 # UI: Termcolor
 #######
 
-prefix = '\001'
-suffix = '\002'
-escape = '\033'
+escape = '\x1b'
 
 class f:
     """ Terminal Text Colors Class """
     
-    BLACK   = prefix + escape + '[30m' + suffix
-    RED     = prefix + escape + '[31m' + suffix
-    GREEN   = prefix + escape + '[32m' + suffix
-    YELLOW  = prefix + escape + '[33m' + suffix
-    BLUE    = prefix + escape + '[34m' + suffix
-    MAGENTA = prefix + escape + '[35m' + suffix
-    CYAN    = prefix + escape + '[36m' + suffix
-    WHITE   = prefix + escape + '[37m' + suffix
-    RESET   = prefix + escape + '[39m' + suffix
+    BLACK   =   escape + '[30m'
+    RED     =   escape + '[31m'
+    GREEN   =   escape + '[32m'
+    YELLOW  =   escape + '[33m'  
+    BLUE    =   escape + '[34m'  
+    MAGENTA =   escape + '[35m'  
+    CYAN    =   escape + '[36m'  
+    WHITE   =   escape + '[37m'  
+    RESET   =   escape + '[39m'  
 
 
 class b:
     """ Terminal Background Colors Class """
     
-    BLACK   = prefix + escape + '[40m' + suffix
-    RED     = prefix + escape + '[41m' + suffix
-    GREEN   = prefix + escape + '[42m' + suffix
-    YELLOW  = prefix + escape + '[43m' + suffix
-    BLUE    = prefix + escape + '[44m' + suffix
-    MAGENTA = prefix + escape + '[45m' + suffix
-    CYAN    = prefix + escape + '[46m' + suffix
-    WHITE   = prefix + escape + '[47m' + suffix
-    RESET   = prefix + escape + '[49m' + suffix
+    BLACK   =   escape + '[40m'  
+    RED     =   escape + '[41m'  
+    GREEN   =   escape + '[42m'  
+    YELLOW  =   escape + '[43m'  
+    BLUE    =   escape + '[44m'  
+    MAGENTA =   escape + '[45m'  
+    CYAN    =   escape + '[46m'  
+    WHITE   =   escape + '[47m'  
+    RESET   =   escape + '[49m'  
 
 
 class s:
     """ Terminal Style Colors Class """
     
-    BRIGHT    = prefix + escape + '[1m' + suffix
-    ITALIC    = prefix + escape + '[3m' + suffix
-    DIM       = prefix + escape + '[2m' + suffix
-    RESET_ALL = prefix + escape + '[0m' + suffix
-    UNDERLINE = prefix + escape + '[4m' + suffix
-    BLINK     = prefix + escape + '[5m' + suffix
-    NEGATIVE  = prefix + escape + '[7m' + suffix
-    CROSSED   = prefix + escape + '[9m' + suffix
+    BRIGHT    =   escape + '[1m'  
+    ITALIC    =   escape + '[3m'  
+    DIM       =   escape + '[2m'  
+    RESET_ALL =   escape + '[0m'  
+    UNDERLINE =   escape + '[4m'  
+    BLINK     =   escape + '[5m'  
+    NEGATIVE  =   escape + '[7m'  
+    CROSSED   =   escape + '[9m'  
 
 
 class tb:

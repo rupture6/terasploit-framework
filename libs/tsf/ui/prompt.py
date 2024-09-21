@@ -4,7 +4,7 @@
 
 from config.module_config import directories
 from itertools import dropwhile
-from libs.tsf.ui.termcolor import *
+from libs.tsf.ui.termcolor import s, f
 
 
 class prompt:
@@ -21,24 +21,24 @@ class prompt:
             module_path = '/'.join(y for y in module[-2:])
             
             try: 
-                module_template = (
-                    f'{s.UNDERLINE}{user}{s.RESET_ALL}' + ' ' +
-                    f'{shortened_path[0]}({s.BRIGHT}{f.RED}{module_path}{s.RESET_ALL})' + ' ' + 
-                    f'{prompt}' + ' '   
+                module_template = ( 
+                    f'\001{s.UNDERLINE}\002{user}\001{s.RESET_ALL}\002' + ' ' +
+                    f'{shortened_path[0]}(\001{s.BRIGHT}\002\001{f.RED}\002{module_path}\001{s.RESET_ALL}\002)' + ' ' + 
+                    f'{prompt}' + ' '
                 )
                 return module_template
             
             except:
                 alternative_template = (
-                    f'{s.UNDERLINE}{user}{s.RESET_ALL}' + ' ' +
-                    f'[unknown folder]({s.BRIGHT}{f.RED}{split_path[-1]}{s.RESET_ALL}{s.RESET_ALL})' + ' ' + 
+                    f'\001{s.UNDERLINE}\002{user}\001{s.RESET_ALL}\002' + ' ' +
+                    f'[unknown folder](\001{s.BRIGHT}\002\001{f.RED}\002{split_path[-1]}\001{s.RESET_ALL}\002)' + ' ' + 
                     f'{prompt}' + ' '
                 )
                 return alternative_template
         
         else:
             default_template = (
-                f'{s.UNDERLINE}{user}{s.RESET_ALL}' + ' ' +
+                f'\001{s.UNDERLINE}\002{user}\001{s.RESET_ALL}\002' + ' ' +
                 f'{prompt}' + ' '
             )
             return default_template

@@ -95,15 +95,13 @@ class Table:
         
         sl = Util.get_longest_obj(result) + 1
         nl = Util.get_longest_obj(str(len(result)))
-        tl = os.get_terminal_size()[0]
         
         for i in ['Encoder','Payload','Exploit','Auxiliary']:
             count = module_count[i]
             if count != 0:
                 module_number = -1
                 
-                print (f"{line_feed()}{i}")
-                print ('='*len(i) + f'{line_feed()}')
+                print (f"{line_feed()}{i}:{line_feed()}")
                 print (f"   {'#'.ljust(nl):<3} {'Path'.ljust(sl):<17} {'Description'}")
                 print (f"   {'─'.ljust(nl):<3} {'────'.ljust(sl):<17} {'───────────'}")
                 for x in result:
@@ -115,10 +113,7 @@ class Table:
                     if i.lower() in x:
                         module_number += 1
                         content = (f"   {str(module_number).ljust(nl):<3} {x.ljust(sl):<17} {description}")
-                        count = len(content) - len(description)
-                        print (content[:tl])
-                        if content[tl:]:
-                            print_overlap(content,count)
+                        print (content)
                 line_break()
         
         if unknown_module:
@@ -129,29 +124,42 @@ class Table:
                 
             
     def module(result,function_name,function_value) -> bool:
-        """ Displays module search result in tabled format """
+        """ Displays module search result in tabled format with highlighting """
         
         if not result:
             info_print (f"Couldn't find anything related to '{function_value}'",type='RED')
             return False
         
-        print (f'{line_feed()}{function_name} ({function_value}){line_feed()}')
-        print (f"   {'#':<5} {'Path/Description'}")
-        print (f"   {'─':<5} {'────────────────'}")
+        hl = f"{s.BRIGHT}{f.RED}{function_value}{s.RESET_ALL}"
+        nl = Util.get_longest_obj(str(len(result)))
+        sl = Util.get_longest_obj(result) + 1
         
-        name = s.BRIGHT + f.RED + function_value + f.RESET + s.RESET_ALL
+        print (f'{line_feed()}{function_name} ({function_value}){line_feed()}')
+        print (f"   {'#'.ljust(nl):<3} {'Path'.ljust(sl):<17} {'Description'}")
+        print (f"   {'─'.ljust(nl):<3} {'────'.ljust(sl):<17} {'───────────'}")
+        
         module_count = -1
+        list_count = 0
         
         for x in result:
+            cve = None
             try:
                 description = Util.get_metadata_contents(x)[x]['description']
             except TypeError:
-                description = 'No description available from modules metadata'
-                continue
+                description = '.'
+            try:
+                cve = Util.get_metadata_contents(x)[x]['cve']
+            except (TypeError,KeyError):
+                pass
+            
             module_count += 1
-            path = x.replace(function_value,name)
-            print (f"   {module_count :<5} {path:<17}")
-            print (f"           {'└── '+description}{line_feed()}")
+            content = (f"   {str(module_count).ljust(nl):<3} {x.ljust(sl):<17} {description}").replace(function_value,hl)
+            print (content)
+            if cve:
+                print (f"   {'.'.ljust(nl):<3}" + '   \\_ ' + cve)
+            list_count += 1   
+        
+        line_break()
         return True
     
     
