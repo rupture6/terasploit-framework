@@ -1,7 +1,7 @@
 # Terasploit
-![Framework Version](https://img.shields.io/badge/Framework_1.3.1--dev-blue) ![OS Compatibility](https://img.shields.io/badge/OS-Linux-red) ![Python Version](https://img.shields.io/badge/Python-3.11.9-green)
+![Framework Version](https://img.shields.io/badge/Framework_1.3.3--dev-blue) ![OS Compatibility](https://img.shields.io/badge/OS-Linux-red) ![Python Version](https://img.shields.io/badge/Python-3.11.9-green)
 
-### Update `v1.3.1-dev`:
+### Update `v1.3.3-dev`:
 - [Update History](https://github.com/rupture6/terasploit-framework/blob/master/UPDATES.md)
 
 ### Available CVE Modules:
