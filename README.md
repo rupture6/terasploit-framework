@@ -5,9 +5,10 @@
 - [Update History](https://github.com/rupture6/terasploit-framework/blob/master/UPDATES.md)
 
 ### Available CVE Modules:
-- CVE-2024-40110
 - CVE-2021-36548
 - CVE-2024-36598
+- CVE-2024-40110
+- CVE-2024-40422
 
 ### Tested on:
 - [Kali Linux](https://www.kali.org/)
