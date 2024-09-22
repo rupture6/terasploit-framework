@@ -226,15 +226,12 @@ class validator:
         
     def validate_phone_number_(value) -> bool:
         """ Validates a phone number via checking the type of an object and the length of it """
-        reformat = value.replace('+','').replace('-','').replace('(','').replace(')','')
-        number = str(reformat).isdigit()
-        if number == True:
-            if len(value) > 15:
-                return False
-            if len(value) < 15:
-                return True
-        if number == False:
-            return False
+        
+        pattern = re.compile(r"(\+\d{1,3})?\s?\(?\d{1,4}\)?[\s.-]?\d{3}[\s.-]?\d{4}")
+        match = re.search(pattern, value)
+        if match:
+            return True
+        return False
         
         
     def validate_condition_(value) -> bool:

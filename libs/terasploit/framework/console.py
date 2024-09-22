@@ -36,7 +36,12 @@ class Loading:
         msg = self.message
         while self.busy:
             count += 1
-            sys.stdout.write('\b' + f'{msg[:count]}{msg[count].upper()}{msg[count+1:]}' + next(self.spinner_generator) + '\r')
+            try:
+                sys.stdout.write('\b' + f'{msg[:count]}{msg[count].upper()}{msg[count+1:]}' + next(self.spinner_generator) + '\r')
+            except IndexError:
+                count = 0
+                sys.stdout.write('\b' + f'{msg[:count]}{msg[count].upper()}{msg[count+1:]}' + next(self.spinner_generator) + '\r')
+                
             sys.stdout.flush()
             time.sleep(self.delay)
             sys.stdout.write('\b')
