@@ -4,4 +4,7 @@ html5
 lxml
 urllib3
 pytz
+phonenumbers
+pycountry
+phone-iso3166
 pyyaml
