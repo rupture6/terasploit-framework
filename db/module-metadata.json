@@ -42,6 +42,16 @@
                 "name":"Devika v1 Path Traversal via snapshot_path Parameter",
                 "description":"Path Traversal Attack via 'snapshot_path' Parameter",
                 "cve":"CVE-2024-40422"
+            },
+
+            "auxiliary/hash/hash_crack":{
+                "name":"Hash Crack",
+                "description":"Cracks Hashes via Dictionary Attack"
+            },
+
+            "auxiliary/hash/salt_hash_password":{
+                "name":"Salt Hash Password",
+                "description":"Generates Salted Hash Password"
             }
         },
 

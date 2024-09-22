@@ -13,7 +13,9 @@ class TerasploitModule(Auxiliary):
             {
                 'Module' : Module.auxiliary,
                 'Name'   : 'Banner Grabber',
-                'Author' : 'Charlie (4steroth)',
+                'Author'  : [
+                    'Charlie <rupture6.dev[at]gmail.com>'
+                ],
                 'Description' : [
                     'Banner Grabber VIA Socket Library Of Python'
                 ]
