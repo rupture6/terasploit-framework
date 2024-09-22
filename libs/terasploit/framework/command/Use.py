@@ -44,9 +44,8 @@ class _use_:
                 else:
                     pass
         
+        module.initialize()
         Set.module(module,path)
-        current_module, _ = Get.module()
-        current_module.initialize()
         
         if 'exploit' in path or 'encoder' in path:
             _use_.import_payload()

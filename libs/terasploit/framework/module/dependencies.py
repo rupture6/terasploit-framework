@@ -23,8 +23,6 @@ import yaml
 import json
 import base64
 import re
-import bcrypt
-import argon2
 
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
@@ -86,8 +84,6 @@ __all__ = [
     'json',
     'base64',
     're',
-    'bcrypt',
-    'argon2',
     'urlparse',
     'BeautifulSoup',
     'MarkupResemblesLocatorWarning',

@@ -114,7 +114,14 @@ class validator:
             assert value.lower() in ['reverse','backdoor']; return True
         except:
             return False
-        
+
+
+    def validate_cryptographic_hash_(value) -> bool:
+        try:
+            assert value.lower in ['sha-1', 'sha-224', 'sha-256', 'sha-384', 'sha-512', 'md5', 'argon2', 'bcrypt']; return True
+        except:
+            return False        
+
         
     def validate_wordlist_(value) -> bool:
         """ Validates the value by checking the file extension and file existence """

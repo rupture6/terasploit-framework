@@ -176,3 +176,45 @@ class Auxiliary(object):
             return socket.gethostbyname(vals)
         except:
             return vals
+        
+        
+    def hash_md5_(self,word):
+        hashed = md5(word.encode())
+        digest = hashed.digest()
+        hexdigest = hashed.hexdigest()
+        return hexdigest, digest
+
+
+    def hash_sha1_(self,word):
+        hashed = sha1(word.encode())
+        digest = hashed.digest()
+        hexdigest = hashed.hexdigest()
+        return hexdigest, digest
+
+
+    def hash_sha224_(self,word):
+        hashed = sha224(word.encode())
+        digest = hashed.digest()
+        hexdigest = hashed.hexdigest()
+        return hexdigest, digest
+
+
+    def hash_sha256_(self,word):
+        hashed = sha256(word.encode())
+        digest = hashed.digest()
+        hexdigest = hashed.hexdigest()
+        return hexdigest, digest
+
+
+    def hash_sha384_(self,word):
+        hashed = sha384(word.encode())
+        digest = hashed.digest()
+        hexdigest = hashed.hexdigest()
+        return hexdigest, digest
+
+
+    def hash_sha512_(self,word):
+        hashed = sha512(word.encode())
+        digest = hashed.digest()
+        hexdigest = hashed.hexdigest()
+        return hexdigest, digest

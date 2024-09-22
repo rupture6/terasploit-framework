@@ -8,8 +8,17 @@ class ascii_banners:
     ''' Contains ascii banner arts for the console '''
     
     def contents() -> list[str]:
-        # Banner 1
-        B1 = s.BRIGHT + f.BLUE + '''
+        return [
+            B1, # Banner 1
+            B2, # Banner 2
+            B3, # Banner 3
+            B4, # Banner 4
+            B5, # Banner 5
+            B6, # Banner 6
+            B7, # Banner 7
+        ]
+
+B1 = s.BRIGHT + f.BLUE + '''
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣄⣠⣀⡀⣀⣠⣤⣤⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣄⢠⣠⣼⣿⣿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⠀⠀⢠⣤⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⣟⣾⣿⣽⣿⣿⣅⠈⠉⠻⣿⣿⣿⣿⣿⡿⠇⠀⠀⠀⠀⠀⠉⠀⠀⠀⠀⠀⢀⡶⠒⢉⡀⢠⣤⣶⣶⣿⣷⣆⣀⡀⠀⢲⣖⠒⠀⠀⠀⠀⠀⠀⠀
@@ -30,8 +39,7 @@ class ascii_banners:
     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ''' + s.RESET_ALL
 
-        # Banner 2
-        B2 = s.BRIGHT + f.RED + '''
+B2 = s.BRIGHT + f.RED + '''
      ________  ________  ___    ___ ________      
     |\   ____\|\   __  \|\  \  /  /|\_____  \     
     \ \  \___|\ \  \|\  \ \  \/  / ||____|\  \    
@@ -43,8 +51,7 @@ class ascii_banners:
 
 ''' + s.RESET_ALL
 
-        # Banner 3
-        B3 = s.BRIGHT + '''  
+B3 = s.BRIGHT + '''  
     Command > EXPLOIT DEVICE 127.0.0.1''' + f.RED + '''
     
     ERROR!
@@ -59,8 +66,7 @@ class ascii_banners:
     [''' + f.YELLOW + '!' + f.RED + ''']''' + f.RESET + ''' SOMETHING WENT WRONG.
 ''' + s.RESET_ALL + f.RESET
 
-        # Banner 4
-        B4 = f.GREEN + '''
+B4 = f.GREEN + '''
    ⢻⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⡿⣦⣀⡇⠀⢧⡇⠀⠀⢺⡟⠀⠀⠀⢰⠉⣰⠟⠊⣠⠂⠀⡸
     ⢻⣿⣿⣷⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⢧⡙⠺⠿⡇⠀⠘⠇⠀⠀⢸⣧⠀⠀⢠⠃⣾⣌⠉⠩⠭⠍⣉⡇
      ⠻⣿⣿⣿⣿⣿⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣞⣋⠀⠈⠀⡳⣧⠀⠀⠀⠀⠀⢸⡏⠀⠀⡞⢰⠉⠉⠉⠉⠉⠓⢻⠃
@@ -73,9 +79,8 @@ class ascii_banners:
   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢿⣤⣤⠴⠟⠋⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⠤⠀⠀⠀⠀⠀⢩⠇⠀⠀
                        root@terasploit:~#
 ''' + f.RESET
-        
-        # Banner 5
-        B5 = f.GREEN + """
+
+B5 = f.GREEN + """
      _____              _____       _       _ _   
     |_   _|            /  ___|     | |     (_) |  
       | | ___ _ __ __ _\ `--. _ __ | | ___  _| |_ 
@@ -86,8 +91,7 @@ class ascii_banners:
                              |_|
 """ + f.RESET
 
-        # Banner 6
-        B6 = f"""{s.BRIGHT}{f.RED}
+B6 = f"""{s.BRIGHT}{f.RED}
                   ..............
              ...asdasdawdaswaewsda...
        a...xzxklvznlkzxnkzlkmvzlxzdlkdsa...p
@@ -108,12 +112,14 @@ class ascii_banners:
                        ˙˙a˙˙
 {f.RESET}{s.RESET_ALL}"""
         
-        return [
-            B1, # Banner 1
-            B2, # Banner 2
-            B3, # Banner 3
-            B4, # Banner 4
-            B5, # Banner 5
-            B6, # Banner 6
-        ]
-        
+B7 = f"""
+   ____________
+  < {f.CYAN}terasploit{f.RESET} >
+   ------------
+          \   ^__^
+           \  (oo)\_______
+              (__)\       )\/\\
+                  ||----w |
+                  ||     || 
+
+"""
