@@ -52,6 +52,11 @@
             "auxiliary/hash/salt_hash_password":{
                 "name":"Salt Hash Password",
                 "description":"Generates Salted Hash Password"
+            },
+
+            "auxiliary/gather/user/phone_number_world_lookup":{
+                "name":"Phone Number World Lookup",
+                "description":"Phone Number Lookup, All Iso-3166-1 Alpha-2 Country Code"
             }
         },
 
