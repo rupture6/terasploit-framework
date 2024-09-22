@@ -4,6 +4,4 @@ html5
 lxml
 urllib3
 pytz
-bcrypt
-argon2-cffi
 pyyaml
