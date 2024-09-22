@@ -1,6 +1,11 @@
 # Framework Updates
 
-### `1.3.2-1.3.3`
+### `1.3.3`
+- Bug fixes
+- Enhanced Framework
+- Added new auxiliary modules
+
+### `1.3.2`
 - Enhanced Framework
 - Bug fixes
 
