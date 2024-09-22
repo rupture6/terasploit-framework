@@ -5,6 +5,7 @@
         "exploit",
         "payload"
     ],
+    
     "modules":{
         "auxiliary":{
             "auxiliary/http/webdav_html_upload":{
@@ -87,57 +88,52 @@
                 "description":"Upload Shell via Supplied Credentials"
             },
 
-            "exploit/webapp/http/apprain_cmf_authenticated_rce":{
+            "exploit/php/webapp/apprain_cmf_authenticated_rce":{
                 "name":"apprain cmf authenticated rce",
                 "description":"Upload Shell via Authenticated Remote Code Execution"
             },
 
-            "exploit/webapp/http/life_insurance_management_system_rce":{
+            "exploit/php/webapp/life_insurance_management_system_rce":{
                 "name":"life insurance management system unauthenticated rce",
                 "description":"Upload Shell via Unauthenticated Remote Code Execution",
                 "cve":"CVE-2024-36598"
             },
 
-            "exploit/webapp/http/monstra_cms_rce":{
+            "exploit/php/webapp/monstra_cms_rce":{
                 "name":"monsta cms authenticated remote code execution",
                 "description":"Upload Shell via Authenticated Remote Code Execution",
                 "cve":"CVE-2021-36548"
             },
 
-            "exploit/webapp/http/poultry_farm_management_system_rce":{
+            "exploit/php/webapp/poultry_farm_management_system_rce":{
                 "name":"poultry farm management system unauthenticated rce",
                 "description":"Upload Shell via Unauthenticated Remote Code Execution",
                 "cve":"CVE-2024-40110"
             },
 
-            "exploit/webapp/http/wbce_cms_authenticated_rce":{
+            "exploit/php/webapp/wbce_cms_authenticated_rce":{
                 "name":"wbce cms authenticated rce",
                 "description":"Upload Shell via Authenticated Remote Code Execution"
             }
         },
         
         "payload":{
-            "payload/php/http/backdoor_cmd":{
-                "name":"backdoor cmd",
-                "description":"Backdoor CMD Handler, HTTP Request"
-            },
-
-            "payload/php/multi/reverse_tcp":{
+            "payload/php/reverse_tcp":{
                 "name":"reverse tcp shell",
                 "description":"Reverse TCP Handler, Bind TCP"
             },
 
-            "payload/python/linux/reverse_tcp":{
+            "payload/cmd/linux/python_reverse_tcp":{
                 "name":"reverse tcp shell",
                 "description":"Reverse TCP Handler, Bind TCP"
             },
 
-            "payload/python/reverse_tcp":{
+            "payload/cmd/unix/python_reverse_tcp":{
                 "name":"reverse tcp shell",
                 "description":"Reverse TCP Handler, Bind TCP"
             },
 
-            "payload/python/reverse_udp":{
+            "payload/cmd/unix/python_reverse_udp":{
                 "name":"reverse udp shell",
                 "description":"Reverse UDP Handler, Bind UDP"
             },

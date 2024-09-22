@@ -1,8 +1,7 @@
 from libs.tsf.core.console.module_container import (
     set_encoder,
     set_module,
-    set_payload,
-    set_module_default_payload
+    set_payload
 )
 
 from libs.tsf.core.console.variable_container import (
@@ -18,7 +17,6 @@ __all__ = [
     "set_encoder",
     "set_module",
     "set_payload",
-    "set_module_default_payload",
     
     "set_command_name",
     "set_command_parameter",
