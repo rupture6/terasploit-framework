@@ -6,27 +6,27 @@ from libs.terasploit.framework.opts.opt_container import *
 from libs.terasploit.framework.info.info_container import *
 from libs.terasploit.framework.module.auxiliary import *
 
-class TerasploitAuxiliary(Auxiliary):
+class TerasploitModule(Auxiliary):
 
-    module_type = 'auxiliary'
-
-    def initialize(self, info_only: bool = False):
+    def initialize(self,info_only: bool = False) -> None:
         update_info (
             {
-                'Module' : '',
-                'Name' : '',
-                'Author' : 'Charlie (4steroth)'
+                'License'     : 'Terasploit Framework License (BSD)',
+                'Name'        : ' -- module name -- ',
+                'Module'      : Module.auxiliary,
+                'Author'      : [
+                    ' -- author --'
+                ],
+                'Description' : [
+                    ' -- description of the module -- '
+                ],
             }
         )
-        
-        register_option ("auxiliary",opt=[
-            OptIP.new("lhost",[
-                "","yes","target listening address"
-            ]),
-            OptPort.new("lport",[
-                4444,"yes","target listening port"
-            ])
-        ])
-        
-    def run(self):
-        pass
+
+        if info_only:
+            return
+
+        register_option (module="auxiliary",reset=True)
+
+    def run(self) -> tuple[str, bool]: 
+        return 'done', True
