@@ -38,9 +38,9 @@
                 "description":"Grab Banner via Socket Library"
             },
 
-            "auxiliary/webapp/python/devikav1":{
+            "auxiliary/webapp/python/devika_path_traversal":{
                 "name":"Devika v1 Path Traversal via snapshot_path Parameter",
-                "description":"Path Traversal Attack via 'snapshot_path' Parameter",
+                "description":"Path Traversal Attack via 'snapshot_path' Parameter In Devika WebAPP",
                 "cve":"CVE-2024-40422"
             },
 
@@ -100,62 +100,67 @@
 
             "exploit/windows/http/xampp_webdav_upload_php":{
                 "name":"xampp webdav upload php",
-                "description":"Upload Shell via Supplied Credentials"
+                "description":"Upload Shell via Using Supplied Credentials"
             },
 
-            "exploit/php/webapp/apprain_cmf_authenticated_rce":{
+            "exploit/webapp/php/apprain_cmf_authenticated_rce":{
                 "name":"apprain cmf authenticated rce",
                 "description":"Upload Shell via Authenticated Remote Code Execution"
             },
 
-            "exploit/php/webapp/life_insurance_management_system_rce":{
+            "exploit/webapp/php/life_insurance_management_system_rce":{
                 "name":"life insurance management system unauthenticated rce",
                 "description":"Upload Shell via Unauthenticated Remote Code Execution",
                 "cve":"CVE-2024-36598"
             },
 
-            "exploit/php/webapp/monstra_cms_rce":{
+            "exploit/webapp/php/monstra_cms_rce":{
                 "name":"monsta cms authenticated remote code execution",
                 "description":"Upload Shell via Authenticated Remote Code Execution",
                 "cve":"CVE-2021-36548"
             },
 
-            "exploit/php/webapp/poultry_farm_management_system_rce":{
+            "exploit/webapp/php/poultry_farm_management_system_rce":{
                 "name":"poultry farm management system unauthenticated rce",
                 "description":"Upload Shell via Unauthenticated Remote Code Execution",
                 "cve":"CVE-2024-40110"
             },
 
-            "exploit/php/webapp/wbce_cms_authenticated_rce":{
+            "exploit/webapp/php/wbce_cms_authenticated_rce":{
                 "name":"wbce cms authenticated rce",
                 "description":"Upload Shell via Authenticated Remote Code Execution"
             }
         },
         
         "payload":{
-            "payload/php/reverse_tcp":{
-                "name":"reverse tcp shell",
+            "payload/generic/shell_reverse_tcp":{
+                "name":"shell reverse tcp (generic)",
                 "description":"Reverse TCP Handler, Bind TCP"
             },
 
-            "payload/cmd/linux/python_reverse_tcp":{
-                "name":"reverse tcp shell",
-                "description":"Reverse TCP Handler, Bind TCP"
+            "payload/php/shell_reverse_tcp":{
+                "name":"shell reverse tcp (php)",
+                "description":"Reverse TCP Handler, PHP Bind TCP"
             },
 
             "payload/cmd/unix/python_reverse_tcp":{
-                "name":"reverse tcp shell",
-                "description":"Reverse TCP Handler, Bind TCP"
+                "name":"python reverse tcp (cmd)",
+                "description":"Reverse TCP Handler, Python Bind TCP"
             },
 
-            "payload/cmd/unix/python_reverse_udp":{
-                "name":"reverse udp shell",
-                "description":"Reverse UDP Handler, Bind UDP"
+            "payload/perl/shell_reverse_tcp":{
+                "name":"shell reverse tcp (perl)",
+                "description":"Reverse TCP Handler, Perl Bind TCP"
             },
 
-            "payload/perl/reverse_tcp":{
-                "name":"reverse tcp shell",
-                "description":"Reverse TCP Handler, Bind TCP"
+            "payload/python/shell_reverse_tcp":{
+                "name":"shell reverse tcp (python)",
+                "description":"Reverse TCP Handler, Python Reverse TCP"
+            },
+            
+            "payload/python/shell_reverse_udp":{
+                "name":"shell reverse tcp (python)",
+                "description":"Reverse UDP Handler, Python Reverse UDP"
             }
         }
     }
