@@ -22,5 +22,5 @@ class Encoder(object):
     def generate_file(self,file_name,architecture,encoded_code) -> None:
         extension = getattr(Extension,f'{architecture.upper()}')
 
-        with open(f"{file_name}.{extension}", 'w') as shell:
+        with open(f"{file_name}{extension}", 'w') as shell:
             shell.write(encoded_code)

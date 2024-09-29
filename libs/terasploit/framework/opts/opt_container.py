@@ -39,8 +39,8 @@ class register_option(ModuleOptions):
     """ Gathers and pass the module option on ModuleOptions Class for storage
     
     >>> register_option('exploit',opt=[
-    >>>     OptIP.new('target',['0.0.0.0','yes','target listening address']),
-    >>>     OptPort.new('port',[4444,'yes','target listening port    ])
+    >>>     OptIP.create('lhost',['0.0.0.0','yes','target listening address']),
+    >>>     OptPort.create('lport',[4444,'yes','target listening port'])
     >>> ])
     """
     
@@ -80,67 +80,67 @@ class ModuleOpt:
 class OptIP:
     """ Inserts the ip validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,'validate:ip']}
     
     
 class OptURL:
     """ Inserts the url validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,'validate:url']}
 
 
 class OptPort:
     """ Inserts the port validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,'validate:port']}
     
 
 class OptBool:
     """ Inserts the bool validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,'validate:bool']}
 
 
 class OptInt:
     """ Inserts the int validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,'validate:int']}
     
 
 class OptFloat:
     """ Inserts the int validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,'validate:float']}
 
 
 class OptFile:
     """ Inserts the file validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,'validate:file']}
 
 
 class OptProxy:
     """ Inserts proxy validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,f'validate:json']}
     
     
 class OptString:
     """ Inserts none validation requirement in list """
     
-    def new(name: str, opt: list) -> dict[str, list]: 
+    def create(name: str, opt: list) -> dict[str, list]: 
         return {name:[opt,f'validate:none']}
     
 
 class OptValidate:
     
-    def new(name: str, validate: str, opt: list) -> dict[str, list]: 
+    def create(name: str, validate: str, opt: list) -> dict[str, list]: 
         return {name:[opt,f'validate:{validate}']}

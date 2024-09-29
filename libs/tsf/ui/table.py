@@ -108,7 +108,7 @@ class Table:
                     try:
                         description = Util.get_metadata_contents(x)[x]['description']
                     except (TypeError,KeyError):
-                        unknown_module[x] = 'Not found in module metadata.'
+                        unknown_module[x] = 'Not found in module metadata'
                         continue
                     if i.lower() in x:
                         module_number += 1
@@ -145,8 +145,8 @@ class Table:
             cve = None
             try:
                 description = Util.get_metadata_contents(x)[x]['description']
-            except TypeError:
-                description = '.'
+            except (TypeError,KeyError):
+                description = 'Not found in module metadata'
             try:
                 cve = Util.get_metadata_contents(x)[x]['cve']
             except (TypeError,KeyError):
@@ -167,7 +167,7 @@ class Table:
         """ Displays info contents in arranged format. """
         
         for key, value in args:
-            if isinstance(value,list):
+            if isinstance(value,list) or isinstance(value,tuple):
                 print (f"{line_feed()}{key}:")
                 for text in value:
                     if key.lower() == 'description':
@@ -177,6 +177,7 @@ class Table:
                 line_break()
             else:
                 print (f"   {key[:15].ljust(15)}  =>  {value}")
+        line_break()
     
 
     def help_table(Core,Module) -> None:

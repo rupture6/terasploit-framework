@@ -378,10 +378,19 @@ class validator:
         
         
     def validate_bool_(value) -> bool:
-        
         """ Validates the value by checking if the value is a boolean value """
         
         try:
             assert value.lower() in ['true','false']; return True
         except:
             return False
+        
+    
+    def validate_php_function_(value) -> bool:
+        """ Validates the value by checking if the value is a valid php function """
+        
+        try:
+            assert value.lower() in ['exec','shell_exec','passthru','system','popen']; return True
+        except:
+            return False
+        

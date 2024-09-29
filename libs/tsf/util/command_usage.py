@@ -9,7 +9,7 @@ class usage_banner:
             "  The 'Info' command displays the full information of the module."
             ],
             'Example:': [
-                '  info auxiliary/scanner/http/domain/sub_domain_discovery'
+                '  info exploit/multi/handler'
                 ]
             }
     
@@ -20,7 +20,7 @@ class usage_banner:
                 '  to interact with the module and perform its task.'
                 ],
             'Example:': [
-                '  use exploit/http/xampp/windows/webdav_upload_php'
+                '  use exploit/multi/handler'
                 ]
             }
     
