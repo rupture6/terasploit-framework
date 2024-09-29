@@ -129,6 +129,12 @@
             "exploit/webapp/php/wbce_cms_authenticated_rce":{
                 "name":"wbce cms authenticated rce",
                 "description":"Upload Shell via Authenticated Remote Code Execution"
+            },
+
+            "exploit/webapp/unix/drupal_drupalgeddon2":{
+                "name":"drupalgeddon2",
+                "description":"Execute Arbitrary Code via Remote Code Execution",
+                "cve":"CVE-2018-7600"
             }
         },
         
@@ -140,27 +146,32 @@
 
             "payload/php/shell_reverse_tcp":{
                 "name":"shell reverse tcp (php)",
-                "description":"Reverse TCP Handler, PHP Bind TCP"
+                "description":"Reverse TCP Handler, Bind TCP"
             },
 
             "payload/cmd/unix/python_reverse_tcp":{
                 "name":"python reverse tcp (cmd)",
-                "description":"Reverse TCP Handler, Python Bind TCP"
+                "description":"Reverse TCP Handler, Bind TCP"
             },
 
             "payload/perl/shell_reverse_tcp":{
                 "name":"shell reverse tcp (perl)",
-                "description":"Reverse TCP Handler, Perl Bind TCP"
+                "description":"Reverse TCP Handler, Bind TCP"
             },
 
             "payload/python/shell_reverse_tcp":{
                 "name":"shell reverse tcp (python)",
-                "description":"Reverse TCP Handler, Python Reverse TCP"
+                "description":"Reverse TCP Handler, Bind TCP"
             },
             
             "payload/python/shell_reverse_udp":{
                 "name":"shell reverse tcp (python)",
-                "description":"Reverse UDP Handler, Python Reverse UDP"
+                "description":"Reverse UDP Handler, Bind UDP"
+            },
+
+            "payload/cmd/unix/php_reverse_tcp":{
+                "name":"php reverse tcp (cmd)",
+                "description":"Reverse TCP Handler, Bind TCP"
             }
         }
     }
