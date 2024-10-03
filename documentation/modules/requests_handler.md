@@ -4,6 +4,9 @@
 - Name => HTTP Requests Handler via Yaml Config
 - Version => 1.0
 
+## Description
+Versatile module that allows a user to use requests library for web exploitation via yaml file config
+
 ## Basic Options
 ```
 tsf auxiliary(http/requests_handler) > show options
@@ -21,9 +24,6 @@ To view the full module information, use 'info <path>' command.
 
 tsf auxiliary(http/requests_handler) >
 ```
-
-## Description
-Versatile module that allows a user to use requests library for web exploitation via yaml file config
 
 ## Config Format
 Content is the main key for reading the config format so be sure that content key is not missing in config.yml file.
