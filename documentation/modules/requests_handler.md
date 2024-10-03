@@ -2,7 +2,7 @@
 - Name: requests_handler
 - Module: Auxiliary
 - Version: 1.0
-- Author: Charlie
+- Author: Charlie C.
 
 ## Basic Options
 ```
