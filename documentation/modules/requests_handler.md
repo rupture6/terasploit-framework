@@ -23,7 +23,7 @@ tsf auxiliary(http/requests_handler) >
 ```
 
 ## Description
-This module is made for handling http requests by reading yaml config file to gather requests contents. It can also be use to exploit a target with web vulnerabilities such as remote code execution. It can upload a shell on the target but it will not start a session automatically. To start a session, you will need to use an exploit module (exploit/multi/handler. You will need multi_handler exploit module to start a session.
+Versatile module that allows a user to use requests library for web exploitation via yaml file config
 
 ## Config Format
 Content is the main key for reading the config format so be sure that content key is not missing in config.yml file.
@@ -34,7 +34,7 @@ content: {
   ... : ...
 }
 ```
-### List of available options
+### Config Keys
 - method - the http request method
 - url - the url of the request
 - params - parameter values
