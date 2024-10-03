@@ -5,6 +5,24 @@
 - Author: Handler4
 - Name: HTTP Requests Handler via Yaml Config
 
+## Basic Options
+```
+tsf auxiliary(http/requests_handler) > show options
+
+Auxiliary options (auxiliary/http/requests_handler):
+
+   Name      Current Settings  Required  Description
+   ────      ────────────────  ────────  ───────────
+   CONFIG                      yes       yaml config to read
+   SESSION   false             yes       use http request session
+
+
+
+To view the full module information, use 'info <path>' command.
+
+tsf auxiliary(http/requests_handler) >
+```
+
 ## Description
 This module is made for handling http requests by reading yaml config file to gather requests contents. It can also be use to exploit a target with web vulnerabilities such as remote code execution. It can upload a shell on the target but it will not start a session automatically. To start a session, you will need to use an exploit module (exploit/multi/handler. You will need multi_handler exploit module to start a session.
 
