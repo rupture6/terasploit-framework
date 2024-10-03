@@ -1,6 +1,6 @@
 ## Metadata
 - License => Terasploit Framework License (BSD)
-- Module => auxiliary
+- Module => Auxiliary
 - Name => HTTP Requests Handler via Yaml Config
 - Version => 1.0
 
@@ -35,8 +35,8 @@ content: {
 }
 ```
 ### Config Keys
-- method - the http request method
-- url - the url of the request
+- method - The http request method
+- url - The url of the request
 - params - A dictionary, list of tuples or bytes to send as a query string.
 - data - A dictionary, list of tuples, bytes or a file object to send to the specified url.
 - headers - A dictionary of HTTP headers to send to the specified url.
