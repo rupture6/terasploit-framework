@@ -1,6 +1,5 @@
-# Requests Handler
-
 ## Metadata
+- Name: requests_handler
 - Module: Auxiliary
 - Version: 1.0
 - Author: Handler4
