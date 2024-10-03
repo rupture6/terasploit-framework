@@ -1,8 +1,8 @@
 ## Metadata
-- License          =>  Terasploit Framework License (BSD)
-- Module           =>  auxiliary
-- Name             =>  HTTP Requests Handler via Yaml Config
-- Version          =>  1.0
+- License => Terasploit Framework License (BSD)
+- Module => auxiliary
+- Name => HTTP Requests Handler via Yaml Config
+- Version => 1.0
 
 ## Basic Options
 ```
