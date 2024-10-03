@@ -2,8 +2,7 @@
 - Name: requests_handler
 - Module: Auxiliary
 - Version: 1.0
-- Author: Handler4
-- Name: HTTP Requests Handler via Yaml Config
+- Author: Charlie (4steroth)
 
 ## Basic Options
 ```
