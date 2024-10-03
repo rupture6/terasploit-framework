@@ -1,8 +1,8 @@
 ## Metadata
-- Name: requests_handler
-- Module: Auxiliary
-- Version: 1.0
-- Author: Charlie C.
+- License          =>  Terasploit Framework License (BSD)
+- Module           =>  auxiliary
+- Name             =>  HTTP Requests Handler via Yaml Config
+- Version          =>  1.0
 
 ## Basic Options
 ```
