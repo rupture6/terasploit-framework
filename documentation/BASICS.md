@@ -102,8 +102,8 @@ Payload options (payload/generic/shell_reverse_tcp):
 
    Name    Current Settings  Required  Description
    ────    ────────────────  ────────  ───────────
-   LHOST                     yes       target listening address
-   LPORT   4444              yes       target listening port
+   LHOST                     yes       the listening address
+   LPORT   4444              yes       the listening port (tcp)
 
 
 
