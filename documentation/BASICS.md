@@ -9,9 +9,25 @@
                   ||----w |
                   ||     ||
 ```
-Terasploit has a basic usage, no need to worry as terasploit framework is not very hard to use, specially if you have
-already used metasploit framework. Terasploit is heavily based on metasploit framework. Terasploit is an exploitation
-framework too, but not as great as metasploit ofcourse.
+Terasploit has a basic usage, no need to worry as terasploit framework is not very complex tool to use, specially 
+if you have already used Metasploit Framework. Terasploit is heavily based on Metasploit Framework, most of its
+functions came from metasploit. I made it like metasploit so I can conveniently add more modules whenever I wanted 
+to.
+
+## Terasploit Arguments
+```
+Terasploit Framework :: Console :: Copyright (c) 2024, Rupture6
+Usage: ./terasploit [option]
+
+Console options:
+   -h, --help               Display this message
+   -q, --quiet              Starts the terasploit framework console without displaying the full banner
+   --logs                   Enable console logging, it will log everything including command, error, info, and debug
+
+Framework options:
+   -v, --version            Shows the current version of the framework
+   -l, --license            Show the framework license
+```
 
 ## Console Commands
 ```
@@ -76,7 +92,7 @@ and run is for non-exploit module. The thing here is that exploit is not a conso
 function. It means that if one of the two commands were used, the console will check whether the command you used is
 an existing attribute from module class, if its not then it will raise an unknown command error.
 
-### Basic usage
+## Basic usage
 ```
 tsf > use exploit/multi/handler
 [*] Using module default payload, payload/generic/shell_reverse_tcp
