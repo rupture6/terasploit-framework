@@ -4,21 +4,30 @@ try:
     import sys; sys.dont_write_bytecode = True
     import traceback
     
-    from init.tsf.ui.wildcard import clean_last_line, banner, line_feed
-    from init.tsf.base.wildcard import Search
+    from init.teralib.ui import (
+        clean_last_line,
+        banner,
+        Spinner
+    )
+    from init.teralib.base import Search
     
     from libs.terasploit.framework.interpreter import base
-    from libs.terasploit.framework.console import Loading
     from libs import args
     
 except KeyboardInterrupt:
     print (f'[*] Terasploit console startup aborted...')
     raise SystemExit
 
-except Exception as error:
-    print (f'[*] Failed to start Terasploit Framework... {error}')
+except:
+    lines = traceback.format_exc().splitlines()
+    trace = traceback.format_tb(sys.exception().__traceback__)
+    print (f'[*] Terasploit startup failed!')
+    print (f'[*] {lines[0]} \n')
+    for i in trace:
+        print (f"  --> {i}")
+    print (f'[*] Error: {lines[-1]}')
     raise SystemExit
-        
+
         
 class console:
     """ Console starter """
@@ -34,13 +43,12 @@ class terasploit:
     
     def start() -> None:
         try:
-            with Loading(message='[*] Starting Terasploit Framework Console...'):
+            with Spinner(message='[*] Starting Terasploit Framework Console...'):
                 from init import modules as _
             clean_last_line()
             console.start()
             
         except KeyboardInterrupt:
-            clean_last_line()
             print (f'[*] Terasploit console startup aborted...')
             raise SystemExit
         
@@ -48,11 +56,10 @@ class terasploit:
             raise SystemExit
         
         except:
-            clean_last_line()
             lines = traceback.format_exc().splitlines()
             trace = traceback.format_tb(sys.exception().__traceback__)
             print (f'[*] Terasploit startup failed!')
-            print (f'[*] {lines[0]}{line_feed()}')
+            print (f'[*] {lines[0]} \n')
             for i in trace:
                 print (f"  --> {i}")
             print (f'[*] Error: {lines[-1]}')
