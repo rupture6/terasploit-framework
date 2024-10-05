@@ -28,5 +28,5 @@ class TerasploitModule(Auxiliary):
 
         register_option (module="auxiliary",reset=True)
 
-    def run(self) -> tuple[str, bool]: 
-        return 'done', True
+    def run(self) -> None:
+        return
