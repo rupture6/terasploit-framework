@@ -46,7 +46,7 @@ class TerasploitModule(Encoder):
         ), True
 
 
-    def run(self) -> tuple[str, bool]: 
+    def run(self) -> None: 
         payload = Get.payload()[0].generate()
         payload_arch = module_info.payload_info['Arch']
         shell_name = module_info.payload_info['PayloadHandler']
@@ -54,7 +54,7 @@ class TerasploitModule(Encoder):
         print_info ('Encoding shell...')
         encoded_shell = self.encode(payload,payload_arch)
         if not encoded_shell:
-            return 'done', True
+            return
         
         print_info ('Done encoding shell in hex, generating file...')
         shell, boolean = encoded_shell
@@ -63,6 +63,6 @@ class TerasploitModule(Encoder):
             print_info (f'Saved as {shell_name}.pl')
             for i in ['----',shell,'----']:
                 print (i)
-            return 'done', True
+            return
         if boolean == False:
-            return 'done', True
+            return

@@ -82,7 +82,7 @@ class TerasploitModule(Auxiliary):
         print (f' -  Subscriber Number: {f.CYAN}{subscriber_number}{f.RESET}')      
 
         
-    def run(self) -> tuple[str,bool]:
+    def run(self) -> None: 
         number = self.OPT()[0]
         iso_file = self.GetData('data/wordlist/code/iso31661a2cc.txt')
         iso_codes = self.FormatFileContentsToList(iso_file)

@@ -37,7 +37,7 @@ class TerasploitModule(Auxiliary):
             OptString.create('query',['id','yes','query key to attempt payload injection'])
         ])
     
-    def run(self) -> tuple[str, bool]: 
+    def run(self) -> None: 
         targets, xss_payload, method, query = self.OPT()
         
         path = self.GetData('data/wordlist/xss/wordlist_payload.txt')

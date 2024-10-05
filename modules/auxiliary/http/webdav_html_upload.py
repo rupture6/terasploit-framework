@@ -34,7 +34,7 @@ class TerasploitModule(Auxiliary):
             OptString.create('html_name',['filename','yes','html file name to use'])
         ])
 
-    def run(self) -> tuple[str, bool]: 
+    def run(self) -> None: 
         target, html_file, html_name = self.OPT()
         self.ParseURL(target)
 

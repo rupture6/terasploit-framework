@@ -44,7 +44,7 @@ class TerasploitModule(Auxiliary):
             print (i)
         
     
-    def run(self):
+    def run(self) -> None: 
         target, snapshot_path = self.OPT()
         self.ParseURL(target) 
         

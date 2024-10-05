@@ -37,11 +37,10 @@ class TerasploitPayload(Payload):
         ])
 
 
-    def run(self) -> tuple[str, bool]: 
+    def run(self) -> None: 
         print_info (f'Generating shell...')
         self.generate_file("shell",Extension.PYTHON,self.generate())
         print ('----' + '\n' + f'{self.generate()}' + '\n' + '----')
-        return 'done', True
     
     
     def generate(self):

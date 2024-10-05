@@ -51,7 +51,7 @@ class TerasploitModule(Auxiliary):
             self.failed_scan.append(connection_return)
     
     
-    def run(self) -> tuple[str, bool]: 
+    def run(self) -> None: 
         host, port_range, socket_type, address_family, threads, thread_sleep, timeout, protocol = self.OPT()
         self.ParseURL(host)
         target = self.GetHostByName(Target.hostname)

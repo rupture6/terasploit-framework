@@ -35,7 +35,7 @@ class TerasploitModule(Auxiliary):
         ])
         
         
-    def run(self):
+    def run(self) -> None: 
         hash_file, dictionary, hash_type, salt = self.OPT()
         
         cryptographic_hash = hash_type.replace('-','')

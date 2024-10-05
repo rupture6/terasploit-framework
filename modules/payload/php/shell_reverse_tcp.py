@@ -36,10 +36,9 @@ class TerasploitPayload(Payload):
         ])
         
         
-    def run(self) -> tuple[str, bool]: 
+    def run(self) -> None: 
         print_info (f'Generating shell...')
         self.generate_file("shell",Extension.PHP,self.generate())
-        return 'done', True
     
     
     def generate(self):

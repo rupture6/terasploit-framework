@@ -33,7 +33,7 @@ class TerasploitModule(Auxiliary):
         ])
 
 
-    def run(self):
+    def run(self) -> None: 
         password, salt, hash_type = self.OPT()
         full_password = password + salt
         
