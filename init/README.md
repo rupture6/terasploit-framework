@@ -1,1 +1,0 @@
-Init folder, contains python files for wildcard import. This will make libraries management much easier than checking each file every update.
