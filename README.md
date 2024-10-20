@@ -1,4 +1,4 @@
-# Terasploit - Exploitation & Information Gathering Framework
+# Terasploit - Exploitation & Information Gathering Framework (Reworking)
 ![Framework Version](https://img.shields.io/badge/Framework_1.3.4--dev-blue) ![OS Compatibility](https://img.shields.io/badge/OS-Linux-red) ![Python Version](https://img.shields.io/badge/Python-3.11.9-green)
 
 Terasploit is an exploitation and information gathering framework. It offers various modules for exploitation and information gathering. It contains auxiliary, encoder, exploit, and payload modules.
